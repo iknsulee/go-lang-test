@@ -1,14 +1,14 @@
 {
   "schemas": [
     {
-      "id": "649a34842ca4835d1e959d18",
+      "id": "649a849c2ca4835d1e959d3f",
       "displayName": "IB-LOC-ACI",
       "templates": [
         {
           "name": "IB-LOC-ACI-CA",
           "displayName": "IB-LOC-ACI-CA",
-          "tenantId": "649a34102ca4835d1e959d17",
-          "templateID": "649a34842ca4835d1e959d19",
+          "tenantId": "649a84982ca4835d1e959d3e",
+          "templateID": "649a849c2ca4835d1e959d40",
           "anps": [],
           "bds": [],
           "contracts": [],
@@ -19,13 +19,14 @@
           "serviceGraphs": [],
           "vrfs": [],
           "templateType": "stretched-template",
-          "description": ""
+          "description": "",
+          "version": 1
         },
         {
           "name": "IB-LOC-ACI-CB",
           "displayName": "IB-LOC-ACI-CB",
-          "tenantId": "649a34102ca4835d1e959d17",
-          "templateID": "649a34842ca4835d1e959d1a",
+          "tenantId": "649a84982ca4835d1e959d3e",
+          "templateID": "649a849c2ca4835d1e959d41",
           "anps": [],
           "bds": [],
           "contracts": [],
@@ -36,13 +37,14 @@
           "serviceGraphs": [],
           "vrfs": [],
           "templateType": "stretched-template",
-          "description": ""
+          "description": "",
+          "version": 1
         },
         {
           "name": "IB-LOC-ACI-ALL",
           "displayName": "IB-LOC-ACI-ALL",
-          "tenantId": "649a34102ca4835d1e959d17",
-          "templateID": "649a34842ca4835d1e959d1b",
+          "tenantId": "649a84982ca4835d1e959d3e",
+          "templateID": "649a849c2ca4835d1e959d42",
           "anps": [],
           "bds": [],
           "contracts": [],
@@ -53,14 +55,15 @@
           "serviceGraphs": [],
           "vrfs": [],
           "templateType": "stretched-template",
-          "description": ""
+          "description": "",
+          "version": 1
         }
       ],
       "sites": [
         {
-          "siteId": "649a314db8dca3f06dce46cb",
+          "siteId": "649a8482b8dca3f06dce46cd",
           "templateName": "IB-LOC-ACI-CA",
-          "templateID": "649a34842ca4835d1e959d19",
+          "templateID": "649a849c2ca4835d1e959d40",
           "anps": [],
           "vrfs": [],
           "bds": [],
@@ -71,9 +74,9 @@
           "networks": []
         },
         {
-          "siteId": "649a32afb8dca3f06dce46cc",
+          "siteId": "649a848bb8dca3f06dce46ce",
           "templateName": "IB-LOC-ACI-CB",
-          "templateID": "649a34842ca4835d1e959d1a",
+          "templateID": "649a849c2ca4835d1e959d41",
           "anps": [],
           "vrfs": [],
           "bds": [],
@@ -84,9 +87,9 @@
           "networks": []
         },
         {
-          "siteId": "649a314db8dca3f06dce46cb",
+          "siteId": "649a8482b8dca3f06dce46cd",
           "templateName": "IB-LOC-ACI-ALL",
-          "templateID": "649a34842ca4835d1e959d1b",
+          "templateID": "649a849c2ca4835d1e959d42",
           "anps": [],
           "vrfs": [],
           "bds": [],
@@ -97,9 +100,9 @@
           "networks": []
         },
         {
-          "siteId": "649a32afb8dca3f06dce46cc",
+          "siteId": "649a848bb8dca3f06dce46ce",
           "templateName": "IB-LOC-ACI-ALL",
-          "templateID": "649a34842ca4835d1e959d1b",
+          "templateID": "649a849c2ca4835d1e959d42",
           "anps": [],
           "vrfs": [],
           "bds": [],
