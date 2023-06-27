@@ -1,0 +1,107 @@
+{
+  "displayName": "{{tenant-name}}",
+  "templates": [
+    {
+      "name": "{{tenant-name}}-CA",
+      "displayName": "{{tenant-name}}-CA",
+      "tenantId": "{{tenant-id}}",
+      "templateType": "stretched-template",
+      "anps": [
+        {
+          "name": "{{tenant-name}}",
+          "displayName": "{{tenant-name}}"
+        }
+      ],
+      "vrfs": [
+        {
+          "name": "{{tenant-name}}-CA_VRF",
+          "displayName": "{{tenant-name}}-CA_VRF",
+          "autoRouteTargetImport": [
+            {
+              "aci": "route-target:as4-nn2:16777227:30780"
+            }
+          ],
+          "autoRouteTargetExport": [
+            {
+              "aci": "route-target:as4-nn2:16777226:30780"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "{{tenant-name}}-CB",
+      "displayName": "{{tenant-name}}-CB",
+      "tenantId": "{{tenant-id}}",
+      "templateType": "stretched-template",
+      "anps": [
+        {
+          "name": "{{tenant-name}}",
+          "displayName": "{{tenant-name}}"
+        }
+      ],
+      "vrfs": [
+        {
+          "name": "{{tenant-name}}-CB_VRF",
+          "displayName": "{{tenant-name}}-CB_VRF",
+          "autoRouteTargetImport": [
+            {
+              "aci": "route-target:as4-nn2:16777229:30780"
+            }
+          ],
+          "autoRouteTargetExport": [
+            {
+              "aci": "route-target:as4-nn2:16777228:30780"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "{{tenant-name}}-ALL",
+      "displayName": "{{tenant-name}}-ALL",
+      "tenantId": "{{tenant-id}}",
+      "templateType": "stretched-template",
+      "anps": [
+        {
+          "name": "{{tenant-name}}",
+          "displayName": "{{tenant-name}}"
+        }
+      ],
+      "vrfs": [
+        {
+          "name": "{{tenant-name}}-ALL_VRF",
+          "displayName": "{{tenant-name}}-ALL_VRF",
+          "autoRouteTargetImport": [
+            {
+              "aci": "route-target:as4-nn2:16777231:30780"
+            }
+          ],
+          "autoRouteTargetExport": [
+            {
+              "aci": "route-target:as4-nn2:16777230:30780"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "siteId": "{{site-id-CA}}",
+      "templateName": "{{tenant-name}}-CA"
+    },
+    {
+      "siteId": "{{site-id-CB}}",
+      "templateName": "{{tenant-name}}-CB"
+    },
+    {
+      "siteId": "{{site-id-CA}}",
+      "templateName": "{{tenant-name}}-ALL"
+    },
+    {
+      "siteId": "{{site-id-CB}}",
+      "templateName": "{{tenant-name}}-ALL"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "649667ffa7a3b9047d507f16",
+  "name": "IB-LOC-ACI",
+  "displayName": "IB-LOC-ACI",
+  "siteAssociations": [
+    {
+      "siteId": "649661f2006ca5471b5b123c",
+      "securityDomains": [],
+      "azureAccount": [],
+      "awsAccount": [],
+      "gcpAccount": [],
+      "gatewayRouter": []
+    },
+    {
+      "siteId": "64966267006ca5471b5b123d",
+      "securityDomains": [],
+      "azureAccount": [],
+      "awsAccount": [],
+      "gcpAccount": [],
+      "gatewayRouter": []
+    }
+  ],
+  "userAssociations": [
+    {
+      "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+    }
+  ],
+  "description": "",
+  "_updateVersion": 0,
+  "_versionDefaulted": false
+}

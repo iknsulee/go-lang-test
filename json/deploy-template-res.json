@@ -1,0 +1,27 @@
+{
+  "schemaversion": "1",
+  "id": "64966a3fd6b4f1f62c8b9528",
+  "updateVersion": 1,
+  "siteGroup": "default",
+  "reqDetails": {
+    "schemaId": "6496691ba7a3b9047d507f2f",
+    "templateId": "6496691ba7a3b9047d507f32",
+    "templateType": "application",
+    "templateName": "IB-LOC-ACI-ALL",
+    "templateDisplayName": "IB-LOC-ACI-ALL",
+    "templateVersion": 1,
+    "deploy": [
+      "all"
+    ],
+    "timeoutSec": 3600
+  },
+  "operDetails": {
+    "createdTime": "2023-06-24T03:59:59.459Z",
+    "startedTime": "0001-01-01T00:00:00Z",
+    "completionTime": "0001-01-01T00:00:00Z",
+    "taskStatus": "Pending",
+    "workerType": [
+      "AciV2"
+    ]
+  }
+}

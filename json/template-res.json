@@ -1,0 +1,306 @@
+{
+  "id": "6496691ba7a3b9047d507f2f",
+  "displayName": "IB-LOC-ACI",
+  "templates": [
+    {
+      "name": "IB-LOC-ACI-CA",
+      "displayName": "IB-LOC-ACI-CA",
+      "tenantId": "649667ffa7a3b9047d507f16",
+      "templateID": "6496691ba7a3b9047d507f30",
+      "anps": [
+        {
+          "uuid": "78fde8a9-4324-4269-a01e-e2c4b16fa664",
+          "name": "IB-LOC-ACI",
+          "displayName": "IB-LOC-ACI",
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CA/anps/IB-LOC-ACI",
+          "epgs": null
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "filters": [],
+      "intersiteL3outs": [],
+      "networks": [],
+      "serviceGraphs": [],
+      "vrfs": [
+        {
+          "uuid": "647630c4-81d1-4e42-9b58-9b69d4034b00",
+          "name": "IB-LOC-ACI-CA_VRF",
+          "displayName": "IB-LOC-ACI-CA_VRF",
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CA/vrfs/IB-LOC-ACI-CA_VRF",
+          "l3MCast": false,
+          "preferredGroup": false,
+          "vzAnyEnabled": false,
+          "vzAnyProviderContracts": [],
+          "vzAnyConsumerContracts": [],
+          "rpConfigs": [],
+          "pcEnfPref": "enforced",
+          "ipDataPlaneLearning": "enabled",
+          "description": "",
+          "rtAutoDisabled": false,
+          "autoRouteTargetImport": [
+            {
+              "aci": "route-target:as4-nn2:16777221:26907"
+            }
+          ],
+          "autoRouteTargetExport": [
+            {
+              "aci": "route-target:as4-nn2:16777222:26907"
+            }
+          ],
+          "routeTargetImport": [],
+          "routeTargetExport": [],
+          "routeTargetImportEvpn": [],
+          "routeTargetExportEvpn": [],
+          "routeLeak": [],
+          "externalPrefixes": null
+        }
+      ],
+      "templateType": "stretched-template",
+      "description": "",
+      "version": 1
+    },
+    {
+      "name": "IB-LOC-ACI-CB",
+      "displayName": "IB-LOC-ACI-CB",
+      "tenantId": "649667ffa7a3b9047d507f16",
+      "templateID": "6496691ba7a3b9047d507f31",
+      "anps": [
+        {
+          "uuid": "fed0d3d6-6dbc-4ab1-9dba-9f5865c7d5d5",
+          "name": "IB-LOC-ACI",
+          "displayName": "IB-LOC-ACI",
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CB/anps/IB-LOC-ACI",
+          "epgs": null
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "filters": [],
+      "intersiteL3outs": [],
+      "networks": [],
+      "serviceGraphs": [],
+      "vrfs": [
+        {
+          "uuid": "7166c6c1-1433-4c75-84b1-2ef333ae2994",
+          "name": "IB-LOC-ACI-CB_VRF",
+          "displayName": "IB-LOC-ACI-CB_VRF",
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CB/vrfs/IB-LOC-ACI-CB_VRF",
+          "l3MCast": false,
+          "preferredGroup": false,
+          "vzAnyEnabled": false,
+          "vzAnyProviderContracts": [],
+          "vzAnyConsumerContracts": [],
+          "rpConfigs": [],
+          "pcEnfPref": "enforced",
+          "ipDataPlaneLearning": "enabled",
+          "description": "",
+          "rtAutoDisabled": false,
+          "autoRouteTargetImport": [
+            {
+              "aci": "route-target:as4-nn2:16777223:26907"
+            }
+          ],
+          "autoRouteTargetExport": [
+            {
+              "aci": "route-target:as4-nn2:16777224:26907"
+            }
+          ],
+          "routeTargetImport": [],
+          "routeTargetExport": [],
+          "routeTargetImportEvpn": [],
+          "routeTargetExportEvpn": [],
+          "routeLeak": [],
+          "externalPrefixes": null
+        }
+      ],
+      "templateType": "stretched-template",
+      "description": "",
+      "version": 1
+    },
+    {
+      "name": "IB-LOC-ACI-ALL",
+      "displayName": "IB-LOC-ACI-ALL",
+      "tenantId": "649667ffa7a3b9047d507f16",
+      "templateID": "6496691ba7a3b9047d507f32",
+      "anps": [
+        {
+          "uuid": "77b7c0fd-6ab5-4e0a-bd98-6cd8bb1440a6",
+          "name": "IB-LOC-ACI",
+          "displayName": "IB-LOC-ACI",
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-ALL/anps/IB-LOC-ACI",
+          "epgs": null
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "filters": [],
+      "intersiteL3outs": [],
+      "networks": [],
+      "serviceGraphs": [],
+      "vrfs": [
+        {
+          "uuid": "cdf109ee-9407-48b6-8272-6994b35458cd",
+          "name": "IB-LOC-ACI-ALL_VRF",
+          "displayName": "IB-LOC-ACI-ALL_VRF",
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-ALL/vrfs/IB-LOC-ACI-ALL_VRF",
+          "l3MCast": false,
+          "preferredGroup": false,
+          "vzAnyEnabled": false,
+          "vzAnyProviderContracts": [],
+          "vzAnyConsumerContracts": [],
+          "rpConfigs": [],
+          "pcEnfPref": "enforced",
+          "ipDataPlaneLearning": "enabled",
+          "description": "",
+          "rtAutoDisabled": false,
+          "autoRouteTargetImport": [
+            {
+              "aci": "route-target:as4-nn2:16777225:26907"
+            }
+          ],
+          "autoRouteTargetExport": [
+            {
+              "aci": "route-target:as4-nn2:16777226:26907"
+            }
+          ],
+          "routeTargetImport": [],
+          "routeTargetExport": [],
+          "routeTargetImportEvpn": [],
+          "routeTargetExportEvpn": [],
+          "routeLeak": [],
+          "externalPrefixes": null
+        }
+      ],
+      "templateType": "stretched-template",
+      "description": "",
+      "version": 1
+    }
+  ],
+  "sites": [
+    {
+      "siteId": "649661f2006ca5471b5b123c",
+      "templateName": "IB-LOC-ACI-CA",
+      "templateID": "6496691ba7a3b9047d507f30",
+      "anps": [
+        {
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CA/anps/IB-LOC-ACI",
+          "epgs": []
+        }
+      ],
+      "vrfs": [
+        {
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CA/vrfs/IB-LOC-ACI-CA_VRF",
+          "regions": [],
+          "routeTargetAddresses": [],
+          "trmEnabled": false,
+          "isRPExternal": false,
+          "dcnmStaticLeafs": [],
+          "routeLeak": [],
+          "routeTargetImportMvpn": [],
+          "routeTargetExportMvpn": []
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "serviceGraphs": [],
+      "intersiteL3outs": [],
+      "networks": []
+    },
+    {
+      "siteId": "64966267006ca5471b5b123d",
+      "templateName": "IB-LOC-ACI-CB",
+      "templateID": "6496691ba7a3b9047d507f31",
+      "anps": [
+        {
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CB/anps/IB-LOC-ACI",
+          "epgs": []
+        }
+      ],
+      "vrfs": [
+        {
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-CB/vrfs/IB-LOC-ACI-CB_VRF",
+          "regions": [],
+          "routeTargetAddresses": [],
+          "trmEnabled": false,
+          "isRPExternal": false,
+          "dcnmStaticLeafs": [],
+          "routeLeak": [],
+          "routeTargetImportMvpn": [],
+          "routeTargetExportMvpn": []
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "serviceGraphs": [],
+      "intersiteL3outs": [],
+      "networks": []
+    },
+    {
+      "siteId": "649661f2006ca5471b5b123c",
+      "templateName": "IB-LOC-ACI-ALL",
+      "templateID": "6496691ba7a3b9047d507f32",
+      "anps": [
+        {
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-ALL/anps/IB-LOC-ACI",
+          "epgs": []
+        }
+      ],
+      "vrfs": [
+        {
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-ALL/vrfs/IB-LOC-ACI-ALL_VRF",
+          "regions": [],
+          "routeTargetAddresses": [],
+          "trmEnabled": false,
+          "isRPExternal": false,
+          "dcnmStaticLeafs": [],
+          "routeLeak": [],
+          "routeTargetImportMvpn": [],
+          "routeTargetExportMvpn": []
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "serviceGraphs": [],
+      "intersiteL3outs": [],
+      "networks": []
+    },
+    {
+      "siteId": "64966267006ca5471b5b123d",
+      "templateName": "IB-LOC-ACI-ALL",
+      "templateID": "6496691ba7a3b9047d507f32",
+      "anps": [
+        {
+          "anpRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-ALL/anps/IB-LOC-ACI",
+          "epgs": []
+        }
+      ],
+      "vrfs": [
+        {
+          "vrfRef": "/schemas/6496691ba7a3b9047d507f2f/templates/IB-LOC-ACI-ALL/vrfs/IB-LOC-ACI-ALL_VRF",
+          "regions": [],
+          "routeTargetAddresses": [],
+          "trmEnabled": false,
+          "isRPExternal": false,
+          "dcnmStaticLeafs": [],
+          "routeLeak": [],
+          "routeTargetImportMvpn": [],
+          "routeTargetExportMvpn": []
+        }
+      ],
+      "bds": [],
+      "contracts": [],
+      "externalEpgs": [],
+      "serviceGraphs": [],
+      "intersiteL3outs": [],
+      "networks": []
+    }
+  ],
+  "description": ""
+}
