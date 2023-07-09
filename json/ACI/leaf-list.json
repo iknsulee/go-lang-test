@@ -1,0 +1,63 @@
+{
+  "totalCount": "1",
+  "imdata": [
+    {
+      "topSystem": {
+        "attributes": {
+          "address": "10.0.48.64",
+          "bootstrapState": "done",
+          "childAction": "",
+          "clusterTimeDiff": "-59",
+          "configIssues": "",
+          "controlPlaneMTU": "9000",
+          "currentTime": "2023-07-06T04:38:08.224+00:00",
+          "dn": "topology/pod-1/node-101/sys",
+          "enforceSubnetCheck": "no",
+          "etepAddr": "0.0.0.0",
+          "fabricDomain": "ACI Fabric1",
+          "fabricId": "1",
+          "fabricMAC": "00:22:BD:F8:19:FF",
+          "id": "101",
+          "inbMgmtAddr": "0.0.0.0",
+          "inbMgmtAddr6": "::",
+          "inbMgmtAddr6Mask": "0",
+          "inbMgmtAddrMask": "0",
+          "inbMgmtGateway": "0.0.0.0",
+          "inbMgmtGateway6": "::",
+          "lastRebootTime": "2023-07-02T23:04:46.617+00:00",
+          "lastResetReason": "unknown",
+          "lcOwn": "local",
+          "modTs": "2023-07-05T06:09:52.316+00:00",
+          "mode": "unspecified",
+          "monPolDn": "uni/fabric/monfab-default",
+          "name": "Leaf1",
+          "nameAlias": "",
+          "nodeType": "unspecified",
+          "oobMgmtAddr": "0.0.0.0",
+          "oobMgmtAddr6": "::",
+          "oobMgmtAddr6Mask": "0",
+          "oobMgmtAddrMask": "0",
+          "oobMgmtGateway": "0.0.0.0",
+          "oobMgmtGateway6": "::",
+          "podId": "1",
+          "remoteNetworkId": "0",
+          "remoteNode": "no",
+          "rlOperPodId": "1",
+          "rlRoutableMode": "no",
+          "rldirectMode": "no",
+          "role": "leaf",
+          "serial": "TEP-1-101",
+          "serverType": "unspecified",
+          "siteId": "1",
+          "state": "in-service",
+          "status": "",
+          "systemUpTime": "03:05:33:21.000",
+          "tepPool": "10.0.0.0/16",
+          "unicastXrEpLearnDisable": "no",
+          "version": "simsw-5.2(7f)",
+          "virtualMode": "no"
+        }
+      }
+    }
+  ]
+}
