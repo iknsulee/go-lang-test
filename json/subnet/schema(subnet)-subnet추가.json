@@ -81,7 +81,7 @@
               "description": ""
             },
             {
-              "uuid": "ae2c2a78-e422-46ac-a8b1-c3df953f01fc",
+              "uuid": "c2b45fc4-dc12-4e5a-b4f1-c06560b771fc",
               "name": "EICHUB_DEV_V101",
               "displayName": "EICHUB_DEV_V101",
               "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/EICHUB_DEV_V101",
@@ -162,7 +162,7 @@
           "description": ""
         },
         {
-          "uuid": "f3495a34-4ff2-4ab1-87d8-a6cfa0af8699",
+          "uuid": "b6258f94-e17f-4e63-885f-1598bc42359a",
           "name": "BD_10.57.5.0_24",
           "displayName": "BD_10.57.5.0_24",
           "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.5.0_24",
@@ -224,7 +224,7 @@
       ],
       "templateType": "stretched-template",
       "description": "",
-      "version": 8
+      "version": 40
     }
   ],
   "sites": [
@@ -256,8 +256,38 @@
             },
             {
               "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/EICHUB_DEV_V101",
-              "domainAssociations": [],
-              "staticPorts": [],
+              "domainAssociations": [
+                {
+                  "dn": "uni/phys-phys",
+                  "domainType": "physicalDomain",
+                  "deployImmediacy": "lazy",
+                  "resolutionImmediacy": "immediate",
+                  "allowMicroSegmentation": false
+                }
+              ],
+              "staticPorts": [
+                {
+                  "type": "port",
+                  "path": "topology/pod-1/paths-101/pathep-[eth1/1]",
+                  "portEncapVlan": 101,
+                  "deploymentImmediacy": "immediate",
+                  "mode": "native"
+                },
+                {
+                  "type": "port",
+                  "path": "topology/pod-1/paths-102/pathep-[eth1/2]",
+                  "portEncapVlan": 102,
+                  "deploymentImmediacy": "immediate",
+                  "mode": "native"
+                },
+                {
+                  "type": "port",
+                  "path": "topology/pod-1/paths-101/pathep-[eth1/3]",
+                  "portEncapVlan": 103,
+                  "deploymentImmediacy": "immediate",
+                  "mode": "native"
+                }
+              ],
               "staticLeafs": [],
               "uSegAttrs": [],
               "subnets": [],
@@ -346,5 +376,5 @@
     }
   ],
   "description": "",
-  "_updateVersion": 1
+  "_updateVersion": 4
 }

@@ -1,0 +1,79 @@
+[
+    {
+        "op": "add",
+        "path": "/templates/{{tenant-name-NSX}}-AC/externalEpgs/-",
+        "value":
+        {
+            "name": "SG_PAAS_INFO",
+            "displayName": "SG_PAAS_INFO",
+            "extEpgType": "on-premise",
+            "vrfRef": "/schemas/{{schema-id-NSX}}/templates/{{tenant-name-NSX}}-AC/vrfs/BIZ_TST_NSX_VRF",
+            "subnets": [
+                {
+                    "ip": "10.57.106.31/32",
+                    "scope": [
+                        "shared-rtctrl",
+                        "shared-security",
+                        "import-security"
+                    ],
+                    "aggregate": []
+                },
+                {
+                    "ip": "10.57.106.32/32",
+                    "scope": [
+                        "shared-rtctrl",
+                        "shared-security",
+                        "import-security"
+                    ],
+                    "aggregate": []
+                },
+                {
+                    "ip": "10.57.106.33/32",
+                    "scope": [
+                        "shared-rtctrl",
+                        "shared-security",
+                        "import-security"
+                    ],
+                    "aggregate": []
+                },
+                {
+                    "ip": "10.57.106.34/32",
+                    "scope": [
+                        "shared-rtctrl",
+                        "shared-security",
+                        "import-security"
+                    ],
+                    "aggregate": []
+                },
+                {
+                    "ip": "10.57.106.35/32",
+                    "scope": [
+                        "shared-rtctrl",
+                        "shared-security",
+                        "import-security"
+                    ],
+                    "aggregate": []
+                }
+            ],
+            "selectors": [],
+            "contractRelationships": [
+                {
+                    "relationshipType": "provider",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_TST_SERVICE"
+                },
+                {
+                    "relationshipType": "consumer",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_SG_PAAS_INFO"
+                },
+                {
+                    "relationshipType": "consumer",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_TST_SERVICE"
+                }
+            ],
+            "preferredGroup": false,
+            "externalEpgRef": "/schemas/{{schema-id-NSX}}/templates/{{tenant-name-NSX}}-AC/externalEpgs/SG_PAAS_INFO",
+            "l3outRef": "/schemas/{{schema-id-NSX}}/templates/{{tenant-name-NSX}}-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+            "description": ""
+        }
+    }
+]

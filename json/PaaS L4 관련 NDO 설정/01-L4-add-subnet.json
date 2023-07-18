@@ -1,0 +1,87 @@
+[
+    {
+        "op": "add",
+        "path": "/templates/{{tenant-name-ACI}}-AC/anps/{{tenant-name-ACI}}/epgs/-",
+        "value":
+        {
+            "name": "PAAS_DEV_V201",
+            "displayName": "PAAS_DEV_V201",
+            "epgRef": "/schemas/{{schema-id-ACI}}/templates/{{tenant-name-ACI}}-AC/anps/{{tenant-name-ACI}}/epgs/PAAS_DEV_V201",
+            "contractRelationships": [
+                {
+                    "relationshipType": "provider",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                },
+                {
+                    "relationshipType": "provider",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_SG_PAAS_API"
+                },
+                {
+                    "relationshipType": "provider",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_TST_SERVICE"
+                },
+                {
+                    "relationshipType": "consumer",
+                    "contractRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/contracts/BIZ_TST_SERVICE"
+                }
+            ],
+            "subnets": [],
+            "uSegEpg": false,
+            "uSegAttrs": [],
+            "intraEpg": "unenforced",
+            "prio": "level3",
+            "proxyArp": false,
+            "mCastSource": false,
+            "preferredGroup": false,
+            "bdRef": "/schemas/{{schema-id-ACI}}/templates/{{tenant-name-ACI}}-AC/bds/BD_10.57.15.0_24",
+            "vrfRef": "",
+            "selectors": [],
+            "epgType": "application",
+            "description": ""
+        }
+    },
+    {
+        "op": "add",
+        "path": "/templates/{{tenant-name-ACI}}-AC/bds/-",
+        "value":
+        {
+            "name": "BD_10.57.15.0_24",
+            "displayName": "BD_10.57.15.0_24",
+            "bdRef": "/schemas/{{schema-id-ACI}}/templates/{{tenant-name-ACI}}-AC/bds/BD_10.57.15.0_24",
+            "l2UnknownUnicast": "flood",
+            "intersiteBumTrafficAllow": false,
+            "optimizeWanBandwidth": false,
+            "l2Stretch": false,
+            "l3MCast": false,
+            "subnets": [],
+            "vrfRef": "/schemas/{{schema-id-ACI}}/templates/{{tenant-name-ACI}}-AC/vrfs/BIZ_TST_ACI_VRF",
+            "unkMcastAct": "flood",
+            "v6unkMcastAct": "flood",
+            "arpFlood": true,
+            "multiDstPktAct": "bd-flood",
+            "dhcpLabels": [],
+            "unicastRouting": true,
+            "description": ""
+        }
+    },
+    {
+        "op": "add",
+        "path": "/sites/{{site-id-AC}}-{{tenant-name-ACI}}-AC/bds/-",
+        "value":
+        {
+            "bdRef": "/schemas/{{schema-id-ACI}}/templates/{{tenant-name-ACI}}-AC/bds/BD_10.57.15.0_24",
+            "subnets": [
+                {
+                    "ip": "10.57.15.1/24",
+                    "description": "",
+                    "scope": "public",
+                    "shared": true,
+                    "querier": false,
+                    "noDefaultGateway": false,
+                    "virtual": false,
+                    "primary": false
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,2176 @@
+{
+    "id": "64a4c8769e9f900000000200",
+    "displayName": "BIZ-TST-NSX",
+    "templates": [
+        {
+            "name": "BIZ-TST-NSX-AC",
+            "displayName": "BIZ-TST-NSX-AC",
+            "tenantId": "64a4c8769e9f900000000001",
+            "templateID": "64a4c8769e9f900000000201",
+            "anps": [
+                {
+                    "uuid": "ea85537e-1216-487b-bde2-9db05f80901e",
+                    "name": "BIZ-LOC-NSX",
+                    "displayName": "BIZ-LOC-NSX",
+                    "anpRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/anps/BIZ-LOC-NSX",
+                    "epgs": []
+                }
+            ],
+            "bds": [
+                {
+                    "uuid": "e1737d9b-1b4a-475e-9919-080c523c0e85",
+                    "name": "BD_1.58.12.0_22",
+                    "displayName": "BD_1.58.12.0_22",
+                    "bdRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/bds/BD_1.58.12.0_22",
+                    "l2UnknownUnicast": "proxy",
+                    "intersiteBumTrafficAllow": false,
+                    "optimizeWanBandwidth": false,
+                    "l2Stretch": false,
+                    "l3MCast": false,
+                    "subnets": [],
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "unkMcastAct": "flood",
+                    "v6unkMcastAct": "flood",
+                    "arpFlood": true,
+                    "multiDstPktAct": "bd-flood",
+                    "dhcpLabels": [],
+                    "unicastRouting": true,
+                    "description": ""
+                }
+            ],
+            "contracts": [],
+            "externalEpgs": [
+                {
+                    "uuid": "95f91bb8-ae53-495b-a490-d2bc9b30108f",
+                    "name": "SG_PAAS_10.57.56.51",
+                    "displayName": "SG_PAAS_10.57.56.51",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.51/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.51",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "e73a5779-805d-4459-8b7c-384a7dbfbcdc",
+                    "name": "SG_PAAS_10.57.56.41",
+                    "displayName": "SG_PAAS_10.57.56.41",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.41/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.41",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "1c6eb431-b4f7-4cfd-b84d-e9292f9a2bdc",
+                    "name": "SG_PAAS_10.57.56.52",
+                    "displayName": "SG_PAAS_10.57.56.52",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.52/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.52",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "a478e4e2-1ce5-4220-a88d-acc934464e05",
+                    "name": "SG_PAAS_10.57.56.31",
+                    "displayName": "SG_PAAS_10.57.56.31",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.31/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.31",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "69f8d07e-6639-4d76-bb2d-cc384e6c745a",
+                    "name": "SG_PAAS_10.57.56.42",
+                    "displayName": "SG_PAAS_10.57.56.42",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.42/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.42",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "ca6ef2e3-8299-4489-a2fe-359b99085c66",
+                    "name": "SG_PAAS_10.57.56.53",
+                    "displayName": "SG_PAAS_10.57.56.53",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.53/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.53",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "27e4071e-531e-4364-83f9-29743a239b1c",
+                    "name": "SG_PAAS_10.57.56.32",
+                    "displayName": "SG_PAAS_10.57.56.32",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.32/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.32",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "3bb4ea7a-c58b-4352-84f4-0e32c7bffa4e",
+                    "name": "SG_PAAS_10.57.56.43",
+                    "displayName": "SG_PAAS_10.57.56.43",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.43/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.43",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "fd7cb248-6d9d-46c7-b05d-f5e608baa850",
+                    "name": "SG_PAAS_10.57.56.54",
+                    "displayName": "SG_PAAS_10.57.56.54",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.54/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.54",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "49331b4e-8b10-4564-8189-8cb29f7a52ba",
+                    "name": "SG_PAAS_10.57.56.101",
+                    "displayName": "SG_PAAS_10.57.56.101",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.101/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.101",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "7387ce87-a7c4-41ff-acd1-b8e7258914a7",
+                    "name": "SG_PAAS_10.57.56.33",
+                    "displayName": "SG_PAAS_10.57.56.33",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.33/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.33",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "91f539bc-663f-4459-b72f-7255d895cc5b",
+                    "name": "SG_PAAS_10.57.56.44",
+                    "displayName": "SG_PAAS_10.57.56.44",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.44/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.44",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "519b00ee-d5bd-4c82-afe6-1ce5cc4e8580",
+                    "name": "SG_PAAS_10.57.56.55",
+                    "displayName": "SG_PAAS_10.57.56.55",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.55/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.55",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "fd82fdd8-db2e-40fb-9cad-d46835614f62",
+                    "name": "SG_PAAS_10.57.56.102",
+                    "displayName": "SG_PAAS_10.57.56.102",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.102/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.102",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "841ed6d3-9fbb-4ec4-9832-f1ad52c2ce84",
+                    "name": "SG_PAAS_10.57.56.34",
+                    "displayName": "SG_PAAS_10.57.56.34",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.34/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.34",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "8c5172d2-4ca6-4e22-8d6f-8a9d33fc2a18",
+                    "name": "SG_PAAS_10.57.56.45",
+                    "displayName": "SG_PAAS_10.57.56.45",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.45/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.45",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "98832ac4-0105-4254-b2c7-a56ab3e01056",
+                    "name": "SG_PAAS_10.57.56.56",
+                    "displayName": "SG_PAAS_10.57.56.56",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.56/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.56",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "31e8b9ca-0187-4415-aaa9-27b0db1d8989",
+                    "name": "SG_PAAS_10.57.56.103",
+                    "displayName": "SG_PAAS_10.57.56.103",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.103/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.103",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "0e8a232d-0181-4a66-b4b3-0e2ade0d6396",
+                    "name": "SG_PAAS_10.57.56.35",
+                    "displayName": "SG_PAAS_10.57.56.35",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.35/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.35",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "65aee221-f3fc-415e-9a72-13c6d594fce9",
+                    "name": "SG_PAAS_10.57.56.46",
+                    "displayName": "SG_PAAS_10.57.56.46",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.46/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.46",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "857b4dd1-4cc0-4291-bc7d-8e6d7a680f6c",
+                    "name": "SG_PAAS_10.57.56.104",
+                    "displayName": "SG_PAAS_10.57.56.104",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.104/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.104",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "7ab52b45-b863-4e01-8b88-b79cee1f384d",
+                    "name": "SG_PAAS_10.57.56.36",
+                    "displayName": "SG_PAAS_10.57.56.36",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.36/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.36",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "8af882ca-f2fc-491a-ae0d-8da2fd1de052",
+                    "name": "SG_PAAS_10.57.56.105",
+                    "displayName": "SG_PAAS_10.57.56.105",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.105/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.105",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "344c5d07-f2f0-40c1-85e4-e03ff5ea69d3",
+                    "name": "SG_PAAS_10.57.56.106",
+                    "displayName": "SG_PAAS_10.57.56.106",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.106/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.106",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "5228fda0-e172-4a86-8139-7ea062243cb6",
+                    "name": "SG_PAAS_10.57.56.107",
+                    "displayName": "SG_PAAS_10.57.56.107",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.56.107/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "import-security",
+                                "shared-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.107",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "04c5406b-5912-4cdd-a39e-65d81952810c",
+                    "name": "L2198_L2199_L3OUT_TO_PAAS",
+                    "displayName": "L2198_L2199_L3OUT_TO_PAAS",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "0.0.0.0/0",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/L2198_L2199_L3OUT_TO_PAAS",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "d526d62d-eefe-45dd-af3c-8006105ee398",
+                    "name": "L2198_L2199_L3OUT_TO_IAAS",
+                    "displayName": "L2198_L2199_L3OUT_TO_IAAS",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/L2198_L2199_L3OUT_TO_IAAS",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_IAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "b736a09e-0259-4694-99cb-e55cd56eee56",
+                    "name": "SG_PAAS_10.57.6.51",
+                    "displayName": "SG_PAAS_10.57.6.51",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.51/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.51",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "91617c27-ed21-421c-a262-55f9e6ebd8ff",
+                    "name": "SG_PAAS_10.57.6.41",
+                    "displayName": "SG_PAAS_10.57.6.41",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.41/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.41",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "77a7166b-9e88-48da-a260-f561050306d4",
+                    "name": "SG_PAAS_10.57.6.52",
+                    "displayName": "SG_PAAS_10.57.6.52",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.52/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.52",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "b075e12b-01a5-40ad-9ffc-4de5b405e328",
+                    "name": "SG_PAAS_10.57.6.31",
+                    "displayName": "SG_PAAS_10.57.6.31",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.31/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.31",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "5bb3da65-c2cc-40fe-ae57-7da93db77822",
+                    "name": "SG_PAAS_10.57.6.42",
+                    "displayName": "SG_PAAS_10.57.6.42",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.42/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.42",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "e54beec2-a647-4133-922d-d47f0cd8f6f3",
+                    "name": "SG_PAAS_10.57.6.53",
+                    "displayName": "SG_PAAS_10.57.6.53",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.53/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.53",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "8e35ed74-6a80-43f2-9a07-ff3bc07d3fc9",
+                    "name": "SG_PAAS_10.57.6.32",
+                    "displayName": "SG_PAAS_10.57.6.32",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.32/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.32",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "d36d8312-5e16-48ef-b725-af74e554a9f1",
+                    "name": "SG_PAAS_10.57.6.43",
+                    "displayName": "SG_PAAS_10.57.6.43",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.43/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.43",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "ade1c4a9-9f0f-45b7-9dfd-e54ee57133ee",
+                    "name": "SG_PAAS_10.57.6.54",
+                    "displayName": "SG_PAAS_10.57.6.54",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.54/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.54",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "5f4d48c2-79fc-4338-9fc9-028f27104be8",
+                    "name": "SG_PAAS_10.57.6.33",
+                    "displayName": "SG_PAAS_10.57.6.33",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.33/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.33",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "ec47af52-b509-4597-9d74-6433b377f668",
+                    "name": "SG_PAAS_10.57.6.44",
+                    "displayName": "SG_PAAS_10.57.6.44",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.44/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.44",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "d41aacf9-7ef7-4081-a777-2cf2478c4edd",
+                    "name": "SG_PAAS_10.57.6.55",
+                    "displayName": "SG_PAAS_10.57.6.55",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.55/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.55",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "1679c026-8b78-40b1-8c1b-c4a91c0c0162",
+                    "name": "SG_PAAS_10.57.6.34",
+                    "displayName": "SG_PAAS_10.57.6.34",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.34/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.34",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "5cc94b45-0018-4731-8676-09444de44ccf",
+                    "name": "SG_PAAS_10.57.6.45",
+                    "displayName": "SG_PAAS_10.57.6.45",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.45/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.45",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "921ebe46-d0af-4724-895c-778c9407f931",
+                    "name": "SG_PAAS_10.57.6.56",
+                    "displayName": "SG_PAAS_10.57.6.56",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.56/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.56",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "1423c3a3-122a-4e52-ab4b-fdfec49e11a5",
+                    "name": "SG_PAAS_10.57.6.35",
+                    "displayName": "SG_PAAS_10.57.6.35",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.35/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.35",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "7d6d6b29-62cb-49a6-b096-a7e59240216d",
+                    "name": "SG_PAAS_10.57.6.46",
+                    "displayName": "SG_PAAS_10.57.6.46",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.46/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.46",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "d95a6824-7fd3-498e-93b1-e34f713e0b86",
+                    "name": "SG_PAAS_10.57.6.36",
+                    "displayName": "SG_PAAS_10.57.6.36",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.6.36/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.36",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                },
+                {
+                    "uuid": "2c57dc16-4758-4517-8ff2-7233dd0fee01",
+                    "name": "SG_PAAS_INFO",
+                    "displayName": "SG_PAAS_INFO",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "subnets": [
+                        {
+                            "ip": "10.57.106.31/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        },
+                        {
+                            "ip": "10.57.106.32/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        },
+                        {
+                            "ip": "10.57.106.33/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        },
+                        {
+                            "ip": "10.57.106.34/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        },
+                        {
+                            "ip": "10.57.106.35/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": []
+                        },
+                        {
+                            "ip": "10.57.106.36/32",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security"
+                            ],
+                            "aggregate": null
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INFO"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_INFO",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "description": ""
+                }
+            ],
+            "filters": [],
+            "intersiteL3outs": [
+                {
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_IAAS",
+                    "uuid": "e5bac8d3-b5f0-420a-b7db-018da37e0929",
+                    "name": "L2198_L2199_L3OUT_TO_IAAS",
+                    "displayName": "L2198_L2199_L3OUT_TO_IAAS",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "externalEpgs": [],
+                    "description": ""
+                },
+                {
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "uuid": "f4feaad3-7659-42ae-947d-ccb1f9112db9",
+                    "name": "L2198_L2199_L3OUT_TO_PAAS",
+                    "displayName": "L2198_L2199_L3OUT_TO_PAAS",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "externalEpgs": [],
+                    "description": ""
+                }
+            ],
+            "networks": [],
+            "serviceGraphs": [],
+            "vrfs": [
+                {
+                    "uuid": "a14a0868-2133-4895-b880-2e5c66e26ad3",
+                    "name": "BIZ_TST_NSX_VRF",
+                    "displayName": "BIZ_TST_NSX_VRF",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "l3MCast": false,
+                    "preferredGroup": false,
+                    "vzAnyEnabled": false,
+                    "vzAnyProviderContracts": [],
+                    "vzAnyConsumerContracts": [],
+                    "rpConfigs": [],
+                    "pcEnfPref": "enforced",
+                    "ipDataPlaneLearning": "enabled",
+                    "description": "",
+                    "rtAutoDisabled": false,
+                    "autoRouteTargetImport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777229:27514"
+                        }
+                    ],
+                    "autoRouteTargetExport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777228:27514"
+                        }
+                    ],
+                    "routeTargetImport": [],
+                    "routeTargetExport": [],
+                    "routeTargetImportEvpn": [],
+                    "routeTargetExportEvpn": [],
+                    "routeLeak": [],
+                    "externalPrefixes": []
+                }
+            ],
+            "templateType": "stretched-template",
+            "description": "",
+            "version": 3
+        }
+    ],
+    "sites": [
+        {
+            "siteId": "64ab565f868d2235b43896e5",
+            "templateName": "BIZ-TST-NSX-AC",
+            "templateID": "64a4c8769e9f900000000201",
+            "anps": [
+                {
+                    "anpRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/anps/BIZ-LOC-NSX",
+                    "epgs": []
+                }
+            ],
+            "vrfs": [
+                {
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "regions": [],
+                    "routeTargetAddresses": [],
+                    "trmEnabled": false,
+                    "isRPExternal": false,
+                    "dcnmStaticLeafs": [],
+                    "routeLeak": [],
+                    "routeTargetImportMvpn": [],
+                    "routeTargetExportMvpn": []
+                }
+            ],
+            "bds": [
+                {
+                    "bdRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/bds/BD_1.58.12.0_22",
+                    "subnets": [
+                        {
+                            "ip": "1.58.12.1/22",
+                            "description": "",
+                            "scope": "private",
+                            "shared": false,
+                            "querier": false,
+                            "noDefaultGateway": false,
+                            "virtual": false,
+                            "primary": false
+                        }
+                    ],
+                    "l3Outs": [],
+                    "hostBasedRouting": false,
+                    "l3OutRefs": [],
+                    "mac": "00:22:BD:F8:19:FF"
+                }
+            ],
+            "contracts": [],
+            "externalEpgs": [
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.51",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.41",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.52",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.31",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.42",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.53",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.32",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.43",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.54",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.101",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.33",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.44",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.55",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.102",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.34",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.45",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.56",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.103",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.35",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.46",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.104",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.36",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.105",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.106",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.56.107",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/L2198_L2199_L3OUT_TO_PAAS",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/L2198_L2199_L3OUT_TO_IAAS",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.51",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.41",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.52",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.31",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.42",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.53",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.32",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.43",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.54",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.33",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.44",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.55",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.34",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.45",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.56",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.35",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.46",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.36",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                },
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_INFO",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                }
+            ],
+            "serviceGraphs": [],
+            "intersiteL3outs": [
+                {
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_IAAS",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "srLocationProfiles": []
+                },
+                {
+                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
+                    "srLocationProfiles": []
+                }
+            ],
+            "networks": []
+        }
+    ],
+    "description": ""
+}

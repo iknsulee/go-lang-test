@@ -1,0 +1,156 @@
+{
+  "tenants": [
+    {
+      "id": "0000ffff0000000000000010",
+      "name": "common",
+      "displayName": "common",
+      "siteAssociations": [
+        {
+          "siteId": "64ab567d868d2235b43896e6",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64ab565f868d2235b43896e5",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "Common tenant for use with all other tenants",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "0000ffff0000000000000011",
+      "name": "infra",
+      "displayName": "infra",
+      "siteAssociations": [],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "Infra tenant for use with all other tenants",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "0000ffff0000000000000012",
+      "name": "dcnm-default-tn",
+      "displayName": "dcnm-default-tn",
+      "siteAssociations": [],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "Default tenant for NDFC sites",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "64ab575c2f41abba8e1a7221",
+      "name": "kslee-tenant",
+      "displayName": "kslee-tenant",
+      "siteAssociations": [
+        {
+          "siteId": "64ab567d868d2235b43896e6",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64ab565f868d2235b43896e5",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "64a4c8769e9f900000000001",
+      "name": "BIZ-TST-NSX",
+      "displayName": "BIZ-TST-NSX",
+      "siteAssociations": [
+        {
+          "siteId": "64ab565f868d2235b43896e5",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64ab567d868d2235b43896e6",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "64a4c8769e9f900000000002",
+      "name": "BIZ-TST-ACI",
+      "displayName": "BIZ-TST-ACI",
+      "siteAssociations": [
+        {
+          "siteId": "64ab565f868d2235b43896e5",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64ab567d868d2235b43896e6",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+[
+    {
+        "op": "add",
+        "path": "/templates/{{tenant-name-common}}-AC/contracts/BIZ_SG_PAAS_INFO/filterRelationships/-",
+        "value":
+        {
+            "filterRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/filters/BIZ_SG_PAAS_INFO_3333",
+            "directives": [],
+            "action": "permit",
+            "priorityOverride": "default"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/templates/{{tenant-name-common}}-AC/filters/-",
+        "value":
+        {
+            "name": "BIZ_SG_PAAS_INFO_3333",
+            "displayName": "BIZ_SG_PAAS_INFO_3333",
+            "description": "",
+            "filterRef": "/schemas/{{schema-id-common}}/templates/{{tenant-name-common}}-AC/filters/BIZ_SG_PAAS_INFO_3333",
+            "entries": [
+                {
+                    "name": "BIZ_SG_PAAS_INFO_3333",
+                    "displayName": "BIZ_SG_PAAS_INFO_3333",
+                    "description": "",
+                    "etherType": "ip",
+                    "arpFlag": "unspecified",
+                    "ipProtocol": "tcp",
+                    "matchOnlyFragments": false,
+                    "stateful": false,
+                    "sourceFrom": "3333",
+                    "sourceTo": "3333",
+                    "destinationFrom": "unspecified",
+                    "destinationTo": "unspecified",
+                    "tcpSessionRules": [
+                        "unspecified"
+                    ]
+                }
+            ]
+        }
+    }
+]
