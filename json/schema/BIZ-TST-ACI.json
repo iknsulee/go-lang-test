@@ -9,13 +9,13 @@
             "templateID": "64af952d2f41abba8e1a7d16",
             "anps": [
                 {
-                    "uuid": "271831e1-724f-4b6d-8da3-ce8db5dc2535",
+                    "uuid": "a5f457b9-4226-4a15-84a1-9247cea16a79",
                     "name": "BIZ-TST-ACI",
                     "displayName": "BIZ-TST-ACI",
                     "anpRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI",
                     "epgs": [
                         {
-                            "uuid": "4e2e8e8a-70a7-437f-af68-e391a5ca26e7",
+                            "uuid": "62973738-1993-4be6-aaa7-682d3d80e524",
                             "name": "PAAS_DEV_V200",
                             "displayName": "PAAS_DEV_V200",
                             "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/PAAS_DEV_V200",
@@ -52,7 +52,7 @@
                             "description": ""
                         },
                         {
-                            "uuid": "0d30f3b0-d5d9-4e73-8c3a-49ceaeb6f43a",
+                            "uuid": "e1fc39f5-a58e-4f95-a285-3edc69beeeef",
                             "name": "DBANKP_TST_V100",
                             "displayName": "DBANKP_TST_V100",
                             "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/DBANKP_TST_V100",
@@ -79,87 +79,13 @@
                             "selectors": [],
                             "epgType": "application",
                             "description": ""
-                        },
-                        {
-                            "uuid": "3db7b5ff-ee45-40c1-8303-96918fd9d89b",
-                            "name": "EICHUB_DEV_V104",
-                            "displayName": "EICHUB_DEV_V104",
-                            "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/EICHUB_DEV_V104",
-                            "contractRelationships": [
-                                {
-                                    "relationshipType": "provider",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
-                                },
-                                {
-                                    "relationshipType": "provider",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
-                                },
-                                {
-                                    "relationshipType": "provider",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
-                                },
-                                {
-                                    "relationshipType": "consumer",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
-                                }
-                            ],
-                            "subnets": [],
-                            "uSegEpg": false,
-                            "uSegAttrs": [],
-                            "intraEpg": "unenforced",
-                            "prio": "level3",
-                            "proxyArp": false,
-                            "mCastSource": false,
-                            "preferredGroup": false,
-                            "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.8.0_24",
-                            "vrfRef": "",
-                            "selectors": [],
-                            "epgType": "application",
-                            "description": ""
-                        },
-                        {
-                            "uuid": "ee2eb86b-aad8-4cbd-83df-a3445220e16b",
-                            "name": "PAAS_DEV_V201",
-                            "displayName": "PAAS_DEV_V201",
-                            "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/PAAS_DEV_V201",
-                            "contractRelationships": [
-                                {
-                                    "relationshipType": "provider",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
-                                },
-                                {
-                                    "relationshipType": "provider",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
-                                },
-                                {
-                                    "relationshipType": "provider",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
-                                },
-                                {
-                                    "relationshipType": "consumer",
-                                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
-                                }
-                            ],
-                            "subnets": [],
-                            "uSegEpg": false,
-                            "uSegAttrs": [],
-                            "intraEpg": "unenforced",
-                            "prio": "level3",
-                            "proxyArp": false,
-                            "mCastSource": false,
-                            "preferredGroup": false,
-                            "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.15.0_24",
-                            "vrfRef": "",
-                            "selectors": [],
-                            "epgType": "application",
-                            "description": ""
                         }
                     ]
                 }
             ],
             "bds": [
                 {
-                    "uuid": "aa0cd493-9b5f-466e-b65d-be266bafa576",
+                    "uuid": "e4f32dca-9166-4f00-9950-0bcc7f3a50b3",
                     "name": "BD_10.57.14.0_24",
                     "displayName": "BD_10.57.14.0_24",
                     "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.14.0_24",
@@ -179,51 +105,11 @@
                     "description": ""
                 },
                 {
-                    "uuid": "67d034dd-0664-4b96-bd8b-35477215911d",
+                    "uuid": "3162fc70-8d17-4cda-afb0-7233aedbb806",
                     "name": "BD_10.57.4.0_24",
                     "displayName": "BD_10.57.4.0_24",
                     "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.4.0_24",
                     "l2UnknownUnicast": "proxy",
-                    "intersiteBumTrafficAllow": false,
-                    "optimizeWanBandwidth": false,
-                    "l2Stretch": false,
-                    "l3MCast": false,
-                    "subnets": [],
-                    "vrfRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/vrfs/BIZ_TST_ACI_VRF",
-                    "unkMcastAct": "flood",
-                    "v6unkMcastAct": "flood",
-                    "arpFlood": true,
-                    "multiDstPktAct": "bd-flood",
-                    "dhcpLabels": [],
-                    "unicastRouting": true,
-                    "description": ""
-                        },
-                {
-                    "uuid": "cc8be6bc-0e1f-4ab1-95d5-25b3c9e086a8",
-                    "name": "BD_10.57.8.0_24",
-                    "displayName": "BD_10.57.8.0_24",
-                    "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.8.0_24",
-                    "l2UnknownUnicast": "proxy",
-                    "intersiteBumTrafficAllow": false,
-                    "optimizeWanBandwidth": false,
-                    "l2Stretch": false,
-                    "l3MCast": false,
-                    "subnets": [],
-                    "vrfRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/vrfs/BIZ_TST_ACI_VRF",
-                    "unkMcastAct": "flood",
-                    "v6unkMcastAct": "flood",
-                    "arpFlood": true,
-                    "multiDstPktAct": "bd-flood",
-                    "dhcpLabels": [],
-                    "unicastRouting": true,
-                    "description": ""
-                },
-                {
-                    "uuid": "84ca4822-830d-4816-8628-58f82370f49a",
-                    "name": "BD_10.57.15.0_24",
-                    "displayName": "BD_10.57.15.0_24",
-                    "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.15.0_24",
-                    "l2UnknownUnicast": "flood",
                     "intersiteBumTrafficAllow": false,
                     "optimizeWanBandwidth": false,
                     "l2Stretch": false,
@@ -247,7 +133,7 @@
             "serviceGraphs": [],
             "vrfs": [
                 {
-                    "uuid": "63ec1022-fac9-4aae-bc02-65c25c3251eb",
+                    "uuid": "19c4aa08-5f61-4aca-9398-4a4f2eb1573a",
                     "name": "BIZ_TST_ACI_VRF",
                     "displayName": "BIZ_TST_ACI_VRF",
                     "vrfRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/vrfs/BIZ_TST_ACI_VRF",
@@ -281,7 +167,7 @@
             ],
             "templateType": "stretched-template",
             "description": "",
-            "version": 3
+            "version": 1
         }
     ],
     "sites": [
@@ -356,40 +242,6 @@
                             "uSegAttrs": [],
                             "subnets": [],
                             "selectors": []
-                        },
-                        {
-                            "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/EICHUB_DEV_V104",
-                            "domainAssociations": [
-                                {
-                                    "dn": "uni/phys-PHY_BIZ_TST_ACI",
-                                    "domainType": "physicalDomain",
-                                    "deployImmediacy": "lazy",
-                                    "resolutionImmediacy": "immediate",
-                                    "allowMicroSegmentation": false
-                                }
-                            ],
-                            "staticPorts": [
-                                {
-                                    "type": "port",
-                                    "path": "topology/pod-1/paths-101/pathep-[eth1/1]",
-                                    "portEncapVlan": 1104,
-                                    "deploymentImmediacy": "immediate",
-                                    "mode": "native"
-                                }
-                            ],
-                            "staticLeafs": [],
-                            "uSegAttrs": [],
-                            "subnets": [],
-                            "selectors": []
-                        },
-                        {
-                            "epgRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/anps/BIZ-TST-ACI/epgs/PAAS_DEV_V201",
-                            "domainAssociations": [],
-                            "staticPorts": [],
-                            "staticLeafs": [],
-                            "uSegAttrs": [],
-                            "subnets": [],
-                            "selectors": []
                         }
                     ]
                 }
@@ -432,44 +284,6 @@
                     "subnets": [
                         {
                             "ip": "10.57.4.1/24",
-                            "description": "",
-                            "scope": "public",
-                            "shared": true,
-                            "querier": false,
-                            "noDefaultGateway": false,
-                            "virtual": false,
-                            "primary": false
-                        }
-                    ],
-                    "l3Outs": [],
-                    "hostBasedRouting": false,
-                    "l3OutRefs": [],
-                    "mac": "00:22:BD:F8:19:FF"
-                },
-                {
-                    "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.8.0_24",
-                    "subnets": [
-                        {
-                            "ip": "10.57.8.1/24",
-                            "description": "",
-                            "scope": "public",
-                            "shared": true,
-                            "querier": false,
-                            "noDefaultGateway": false,
-                            "virtual": false,
-                            "primary": false
-                        }
-                    ],
-                    "l3Outs": [],
-                    "hostBasedRouting": false,
-                    "l3OutRefs": [],
-                    "mac": "00:22:BD:F8:19:FF"
-                },
-                {
-                    "bdRef": "/schemas/64a4c8769e9f900000000300/templates/BIZ-TST-ACI-AC/bds/BD_10.57.15.0_24",
-                    "subnets": [
-                        {
-                            "ip": "10.57.15.1/24",
                             "description": "",
                             "scope": "public",
                             "shared": true,

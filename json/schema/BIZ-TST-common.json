@@ -1,0 +1,569 @@
+{
+    "id": "64a4c8769e9f900000000100",
+    "displayName": "BIZ-TST-common",
+    "templates": [
+        {
+            "name": "BIZ-TST-common-AC",
+            "displayName": "BIZ-TST-common-AC",
+            "tenantId": "0000ffff0000000000000010",
+            "templateID": "64a4c8769e9f900000000101",
+            "anps": [],
+            "bds": [
+                {
+                    "uuid": "0fb3dbc8-a25f-4656-94f3-ab5c2e711496",
+                    "name": "BD_10.59.247.0_24",
+                    "displayName": "BD_10.59.247.0_24",
+                    "bdRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/bds/BD_10.59.247.0_24",
+                    "l2UnknownUnicast": "flood",
+                    "intersiteBumTrafficAllow": false,
+                    "optimizeWanBandwidth": false,
+                    "l2Stretch": false,
+                    "l3MCast": false,
+                    "subnets": [],
+                    "vrfRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/vrfs/BIZ_TST_SERVICE",
+                    "unkMcastAct": "flood",
+                    "v6unkMcastAct": "flood",
+                    "arpFlood": true,
+                    "multiDstPktAct": "bd-flood",
+                    "dhcpLabels": [],
+                    "unicastRouting": true,
+                    "description": ""
+                }
+            ],
+            "contracts": [
+                {
+                    "uuid": "5602ca7b-bf0c-4324-971f-1aa0465ecee2",
+                    "name": "BIZ_TST_SERVICE",
+                    "displayName": "BIZ_TST_SERVICE",
+                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE",
+                    "filterRelationships": [
+                        {
+                            "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_PERMIT_ALL",
+                            "directives": [],
+                            "action": "permit",
+                            "priorityOverride": "default"
+                        }
+                    ],
+                    "prio": "unspecified",
+                    "targetDscp": "unspecified",
+                    "scope": "global",
+                    "subjectName": "BIZ_TST_SERVICE",
+                    "filterType": "bothWay",
+                    "filterRelationshipsProviderToConsumer": [],
+                    "filterRelationshipsConsumerToProvider": [],
+                    "description": ""
+                },
+                {
+                    "uuid": "303aa63e-91d7-4aec-accc-78bc332b683c",
+                    "name": "BIZ_SG_PAAS_INGRESS",
+                    "displayName": "BIZ_SG_PAAS_INGRESS",
+                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS",
+                    "filterRelationships": [
+                        {
+                            "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_INGRESS_80",
+                            "directives": [],
+                            "action": "permit",
+                            "priorityOverride": "default"
+                        },
+                        {
+                            "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_INGRESS_443",
+                            "directives": [],
+                            "action": "permit",
+                            "priorityOverride": "default"
+                        },
+                        {
+                            "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_INGRESS_1936",
+                            "directives": [],
+                            "action": "permit",
+                            "priorityOverride": "default"
+                        }
+                    ],
+                    "prio": "unspecified",
+                    "targetDscp": "unspecified",
+                    "scope": "global",
+                    "subjectName": "BIZ_SG_PAAS_INGRESS",
+                    "filterType": "bothWay",
+                    "filterRelationshipsProviderToConsumer": [],
+                    "filterRelationshipsConsumerToProvider": [],
+                    "serviceGraphRelationship": {
+                        "serviceGraphRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10",
+                        "serviceGraphContractRelationRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS/serviceGraphs/BIZ_TST_L4_A10",
+                        "serviceNodesRelationship": [
+                            {
+                                "serviceNodeRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10/serviceNodes/N1",
+                                "providerConnector": {
+                                    "connectorType": "general",
+                                    "bdRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/bds/BD_10.59.247.0_24"
+                                },
+                                "consumerConnector": {
+                                    "connectorType": "general",
+                                    "bdRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/bds/BD_10.59.247.0_24"
+                                }
+                            }
+                        ]
+                    },
+                    "description": ""
+                },
+                {
+                    "uuid": "b45f1990-8669-4683-bcf1-f01aecbe1401",
+                    "name": "BIZ_SG_PAAS_API",
+                    "displayName": "BIZ_SG_PAAS_API",
+                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API",
+                    "filterRelationships": [
+                        {
+                            "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_API_6443",
+                            "directives": [],
+                            "action": "permit",
+                            "priorityOverride": "default"
+                        },
+                        {
+                            "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_API_22623",
+                            "directives": [],
+                            "action": "permit",
+                            "priorityOverride": "default"
+                        }
+                    ],
+                    "prio": "unspecified",
+                    "targetDscp": "unspecified",
+                    "scope": "global",
+                    "subjectName": "BIZ_SG_PAAS_API",
+                    "filterType": "bothWay",
+                    "filterRelationshipsProviderToConsumer": [],
+                    "filterRelationshipsConsumerToProvider": [],
+                    "serviceGraphRelationship": {
+                        "serviceGraphRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10",
+                        "serviceGraphContractRelationRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API/serviceGraphs/BIZ_TST_L4_A10",
+                        "serviceNodesRelationship": [
+                            {
+                                "serviceNodeRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10/serviceNodes/N1",
+                                "providerConnector": {
+                                    "connectorType": "general",
+                                    "bdRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/bds/BD_10.59.247.0_24"
+                                },
+                                "consumerConnector": {
+                                    "connectorType": "general",
+                                    "bdRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/bds/BD_10.59.247.0_24"
+                                }
+                            }
+                        ]
+                    },
+                    "description": ""
+                }
+            ],
+            "externalEpgs": [
+                {
+                    "uuid": "dbb73278-984f-4c0d-8cca-1cd0573ad527",
+                    "name": "L3OUT_BIZ_TST_SERVICE",
+                    "displayName": "L3OUT_BIZ_TST_SERVICE",
+                    "extEpgType": "on-premise",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/vrfs/BIZ_TST_SERVICE",
+                    "subnets": [
+                        {
+                            "ip": "0.0.0.0/0",
+                            "scope": [
+                                "shared-rtctrl",
+                                "shared-security",
+                                "import-security",
+                                "export-rtctrl"
+                            ],
+                            "aggregate": []
+                        }
+                    ],
+                    "selectors": [],
+                    "contractRelationships": [
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        },
+                        {
+                            "relationshipType": "provider",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        },
+                        {
+                            "relationshipType": "consumer",
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                        }
+                    ],
+                    "preferredGroup": false,
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/externalEpgs/L3OUT_BIZ_TST_SERVICE",
+                    "l3outRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/l3outs/L3OUT_BIZ_TST_SERVICE",
+                    "description": ""
+                }
+            ],
+            "filters": [
+                {
+                    "uuid": "ac6ecb8b-aaa4-4d12-8a31-69db0591a8ff",
+                    "name": "BIZ_SG_PAAS_API_22623",
+                    "displayName": "BIZ_SG_PAAS_API_22623",
+                    "description": "",
+                    "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_API_22623",
+                    "entries": [
+                        {
+                            "name": "BIZ_SG_PAAS_API_22623",
+                            "displayName": "BIZ_SG_PAAS_API_22623",
+                            "description": "",
+                            "etherType": "ip",
+                            "arpFlag": "unspecified",
+                            "ipProtocol": "tcp",
+                            "matchOnlyFragments": false,
+                            "stateful": false,
+                            "sourceFrom": "22623",
+                            "sourceTo": "22623",
+                            "destinationFrom": "unspecified",
+                            "destinationTo": "unspecified",
+                            "tcpSessionRules": [
+                                "unspecified"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uuid": "2023c3f2-460d-423f-aff2-7a2be710c2ea",
+                    "name": "BIZ_SG_PAAS_INGRESS_1936",
+                    "displayName": "BIZ_SG_PAAS_INGRESS_1936",
+                    "description": "",
+                    "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_INGRESS_1936",
+                    "entries": [
+                        {
+                            "name": "BIZ_SG_PAAS_INGRESS_1936",
+                            "displayName": "BIZ_SG_PAAS_INGRESS_1936",
+                            "description": "",
+                            "etherType": "ip",
+                            "arpFlag": "unspecified",
+                            "ipProtocol": "tcp",
+                            "matchOnlyFragments": false,
+                            "stateful": false,
+                            "sourceFrom": "1936",
+                            "sourceTo": "1936",
+                            "destinationFrom": "unspecified",
+                            "destinationTo": "unspecified",
+                            "tcpSessionRules": [
+                                "unspecified"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uuid": "feb784e4-d336-4399-9123-b834484b56a9",
+                    "name": "BIZ_SG_PAAS_INGRESS_80",
+                    "displayName": "BIZ_SG_PAAS_INGRESS_80",
+                    "description": "",
+                    "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_INGRESS_80",
+                    "entries": [
+                        {
+                            "name": "BIZ_SG_PAAS_INGRESS_80",
+                            "displayName": "BIZ_SG_PAAS_INGRESS_80",
+                            "description": "",
+                            "etherType": "ip",
+                            "arpFlag": "unspecified",
+                            "ipProtocol": "tcp",
+                            "matchOnlyFragments": false,
+                            "stateful": false,
+                            "sourceFrom": "http",
+                            "sourceTo": "http",
+                            "destinationFrom": "unspecified",
+                            "destinationTo": "unspecified",
+                            "tcpSessionRules": [
+                                "unspecified"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uuid": "0c50ee52-0d68-41b9-aa38-173e75a4afea",
+                    "name": "BIZ_SG_PAAS_API_6443",
+                    "displayName": "BIZ_SG_PAAS_API_6443",
+                    "description": "",
+                    "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_API_6443",
+                    "entries": [
+                        {
+                            "name": "BIZ_SG_PAAS_API_6443",
+                            "displayName": "BIZ_SG_PAAS_API_6443",
+                            "description": "",
+                            "etherType": "ip",
+                            "arpFlag": "unspecified",
+                            "ipProtocol": "tcp",
+                            "matchOnlyFragments": false,
+                            "stateful": false,
+                            "sourceFrom": "6443",
+                            "sourceTo": "6443",
+                            "destinationFrom": "unspecified",
+                            "destinationTo": "unspecified",
+                            "tcpSessionRules": [
+                                "unspecified"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uuid": "554351bf-b22d-4de1-b542-e9d1d25a618b",
+                    "name": "BIZ_SG_PAAS_INGRESS_443",
+                    "displayName": "BIZ_SG_PAAS_INGRESS_443",
+                    "description": "",
+                    "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_SG_PAAS_INGRESS_443",
+                    "entries": [
+                        {
+                            "name": "BIZ_SG_PAAS_INGRESS_443",
+                            "displayName": "BIZ_SG_PAAS_INGRESS_443",
+                            "description": "",
+                            "etherType": "ip",
+                            "arpFlag": "unspecified",
+                            "ipProtocol": "tcp",
+                            "matchOnlyFragments": false,
+                            "stateful": false,
+                            "sourceFrom": "https",
+                            "sourceTo": "https",
+                            "destinationFrom": "unspecified",
+                            "destinationTo": "unspecified",
+                            "tcpSessionRules": [
+                                "unspecified"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "uuid": "70f4cd1f-0470-46a4-b85d-a75c6d1f3769",
+                    "name": "BIZ_PERMIT_ALL",
+                    "displayName": "BIZ_PERMIT_ALL",
+                    "description": "",
+                    "filterRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/filters/BIZ_PERMIT_ALL",
+                    "entries": [
+                        {
+                            "name": "BIZ_PERMIT_ALL",
+                            "displayName": "BIZ_PERMIT_ALL",
+                            "description": "",
+                            "etherType": "unspecified",
+                            "arpFlag": "unspecified",
+                            "ipProtocol": "unspecified",
+                            "matchOnlyFragments": false,
+                            "stateful": false,
+                            "sourceFrom": "unspecified",
+                            "sourceTo": "unspecified",
+                            "destinationFrom": "unspecified",
+                            "destinationTo": "unspecified",
+                            "tcpSessionRules": [
+                                "unspecified"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "intersiteL3outs": [
+                {
+                    "l3outRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/l3outs/L3OUT_BIZ_TST_SERVICE",
+                    "uuid": "3c0f9006-39e5-47f7-b915-c05a9e1267a7",
+                    "name": "L3OUT_BIZ_TST_SERVICE",
+                    "displayName": "L3OUT_BIZ_TST_SERVICE",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/vrfs/BIZ_TST_SERVICE",
+                    "externalEpgs": [],
+                    "description": ""
+                }
+            ],
+            "networks": [],
+            "serviceGraphs": [
+                {
+                    "uuid": "45e37f9f-6676-44c6-83ca-cca630426aa0",
+                    "name": "BIZ_TST_L4_A10",
+                    "displayName": "BIZ_TST_L4_A10",
+                    "serviceGraphRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10",
+                    "description": "",
+                    "serviceNodes": [
+                        {
+                            "uuid": "fe670752-b00f-4c39-a9db-b89483397a58",
+                            "name": "N1",
+                            "serviceNodeRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10/serviceNodes/N1",
+                            "serviceNodeTypeId": "0000ffff0000000000000052",
+                            "index": 1
+                        }
+                    ],
+                    "nodeFilter": "allow-all",
+                    "svcRuleType": "vrf"
+                }
+            ],
+            "vrfs": [
+                {
+                    "uuid": "9d53d595-06ff-44af-b4da-7da872be57e0",
+                    "name": "BIZ_TST_SERVICE",
+                    "displayName": "BIZ_TST_SERVICE",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/vrfs/BIZ_TST_SERVICE",
+                    "l3MCast": false,
+                    "preferredGroup": false,
+                    "vzAnyEnabled": true,
+                    "vzAnyProviderContracts": [],
+                    "vzAnyConsumerContracts": [
+                        {
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS"
+                        },
+                        {
+                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API"
+                        }
+                    ],
+                    "rpConfigs": [],
+                    "pcEnfPref": "enforced",
+                    "ipDataPlaneLearning": "enabled",
+                    "description": "",
+                    "rtAutoDisabled": false,
+                    "autoRouteTargetImport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777227:27210"
+                        }
+                    ],
+                    "autoRouteTargetExport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777228:27210"
+                        }
+                    ],
+                    "routeTargetImport": [],
+                    "routeTargetExport": [],
+                    "routeTargetImportEvpn": [],
+                    "routeTargetExportEvpn": [],
+                    "routeLeak": [],
+                    "externalPrefixes": []
+                }
+            ],
+            "templateType": "stretched-template",
+            "description": "",
+            "version": 1
+        }
+    ],
+    "sites": [
+        {
+            "siteId": "64b3dacb4aeb77656bd0008c",
+            "templateName": "BIZ-TST-common-AC",
+            "templateID": "64a4c8769e9f900000000101",
+            "anps": [],
+            "vrfs": [
+                {
+                    "vrfRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/vrfs/BIZ_TST_SERVICE",
+                    "regions": [],
+                    "routeTargetAddresses": [],
+                    "trmEnabled": false,
+                    "isRPExternal": false,
+                    "dcnmStaticLeafs": [],
+                    "routeLeak": [],
+                    "routeTargetImportMvpn": [],
+                    "routeTargetExportMvpn": []
+                }
+            ],
+            "bds": [
+                {
+                    "bdRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/bds/BD_10.59.247.0_24",
+                    "subnets": [
+                        {
+                            "ip": "10.59.247.1/24",
+                            "description": "",
+                            "scope": "public",
+                            "shared": true,
+                            "querier": false,
+                            "noDefaultGateway": false,
+                            "virtual": false,
+                            "primary": false
+                        }
+                    ],
+                    "l3Outs": [],
+                    "hostBasedRouting": false,
+                    "l3OutRefs": [],
+                    "mac": "00:22:BD:F8:19:FF"
+                }
+            ],
+            "contracts": [
+                {
+                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
+                },
+                {
+                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INGRESS",
+                    "serviceGraphRelationship": {
+                        "serviceGraphRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10",
+                        "serviceNodesRelationship": [
+                            {
+                                "serviceNodeRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10/serviceNodes/N1",
+                                "providerConnector": {
+                                    "clusterInterface": {
+                                        "dn": "uni/tn-common/lDevVip-BIZ_TST_L4_A10/lIf-BIZ_TST_L4_A10"
+                                    },
+                                    "redirectPolicy": {
+                                        "dn": "uni/tn-common/svcCont/svcRedirectPol-BIZ_TST_L4_A10"
+                                    },
+                                    "subnets": []
+                                },
+                                "consumerConnector": {
+                                    "clusterInterface": {
+                                        "dn": "uni/tn-common/lDevVip-BIZ_TST_L4_A10/lIf-BIZ_TST_L4_A10"
+                                    },
+                                    "redirectPolicy": {
+                                        "dn": "uni/tn-common/svcCont/svcRedirectPol-BIZ_TST_L4_A10"
+                                    },
+                                    "subnets": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_API",
+                    "serviceGraphRelationship": {
+                        "serviceGraphRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10",
+                        "serviceNodesRelationship": [
+                            {
+                                "serviceNodeRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10/serviceNodes/N1",
+                                "providerConnector": {
+                                    "clusterInterface": {
+                                        "dn": "uni/tn-common/lDevVip-BIZ_TST_L4_A10/lIf-BIZ_TST_L4_A10"
+                                    },
+                                    "redirectPolicy": {
+                                        "dn": "uni/tn-common/svcCont/svcRedirectPol-BIZ_TST_L4_A10"
+                                    },
+                                    "subnets": []
+                                },
+                                "consumerConnector": {
+                                    "clusterInterface": {
+                                        "dn": "uni/tn-common/lDevVip-BIZ_TST_L4_A10/lIf-BIZ_TST_L4_A10"
+                                    },
+                                    "redirectPolicy": {
+                                        "dn": "uni/tn-common/svcCont/svcRedirectPol-BIZ_TST_L4_A10"
+                                    },
+                                    "subnets": []
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "externalEpgs": [
+                {
+                    "externalEpgRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/externalEpgs/L3OUT_BIZ_TST_SERVICE",
+                    "l3outDn": "",
+                    "subnets": [],
+                    "routeReachabilityInternetType": "internet"
+                }
+            ],
+            "serviceGraphs": [
+                {
+                    "serviceGraphRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10",
+                    "serviceNodes": [
+                        {
+                            "serviceNodeRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/serviceGraphs/BIZ_TST_L4_A10/serviceNodes/N1",
+                            "device": {
+                                "dn": "uni/tn-common/lDevVip-BIZ_TST_L4_A10",
+                                "funcType": "GoTo"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "intersiteL3outs": [
+                {
+                    "l3outRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/l3outs/L3OUT_BIZ_TST_SERVICE",
+                    "vrfRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/vrfs/BIZ_TST_SERVICE",
+                    "srLocationProfiles": []
+                }
+            ],
+            "networks": []
+        }
+    ],
+    "description": ""
+}

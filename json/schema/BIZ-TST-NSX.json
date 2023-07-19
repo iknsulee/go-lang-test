@@ -9,7 +9,7 @@
             "templateID": "64a4c8769e9f900000000201",
             "anps": [
                 {
-                    "uuid": "ea85537e-1216-487b-bde2-9db05f80901e",
+                    "uuid": "d7041ac2-cd85-4cce-b6c8-6091068c7eb9",
                     "name": "BIZ-LOC-NSX",
                     "displayName": "BIZ-LOC-NSX",
                     "anpRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/anps/BIZ-LOC-NSX",
@@ -18,7 +18,7 @@
             ],
             "bds": [
                 {
-                    "uuid": "e1737d9b-1b4a-475e-9919-080c523c0e85",
+                    "uuid": "77f0b02a-5abe-41b8-858a-89d381bf62e9",
                     "name": "BD_1.58.12.0_22",
                     "displayName": "BD_1.58.12.0_22",
                     "bdRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/bds/BD_1.58.12.0_22",
@@ -41,7 +41,7 @@
             "contracts": [],
             "externalEpgs": [
                 {
-                    "uuid": "95f91bb8-ae53-495b-a490-d2bc9b30108f",
+                    "uuid": "9c8de8d2-61a6-4966-8f0b-a30179183ddb",
                     "name": "SG_PAAS_10.57.56.51",
                     "displayName": "SG_PAAS_10.57.56.51",
                     "extEpgType": "on-premise",
@@ -78,7 +78,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "e73a5779-805d-4459-8b7c-384a7dbfbcdc",
+                    "uuid": "ba354f16-d4c9-4732-a1d2-852bf29c0e1a",
                     "name": "SG_PAAS_10.57.56.41",
                     "displayName": "SG_PAAS_10.57.56.41",
                     "extEpgType": "on-premise",
@@ -115,7 +115,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "1c6eb431-b4f7-4cfd-b84d-e9292f9a2bdc",
+                    "uuid": "a5004414-64ee-4d6c-95f5-9561fbed49d8",
                     "name": "SG_PAAS_10.57.56.52",
                     "displayName": "SG_PAAS_10.57.56.52",
                     "extEpgType": "on-premise",
@@ -152,7 +152,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "a478e4e2-1ce5-4220-a88d-acc934464e05",
+                    "uuid": "4c2d0821-59f3-4a78-8248-4b22f424a311",
                     "name": "SG_PAAS_10.57.56.31",
                     "displayName": "SG_PAAS_10.57.56.31",
                     "extEpgType": "on-premise",
@@ -189,7 +189,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "69f8d07e-6639-4d76-bb2d-cc384e6c745a",
+                    "uuid": "ff80764e-31a7-4268-8314-16cd5d54915b",
                     "name": "SG_PAAS_10.57.56.42",
                     "displayName": "SG_PAAS_10.57.56.42",
                     "extEpgType": "on-premise",
@@ -226,7 +226,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "ca6ef2e3-8299-4489-a2fe-359b99085c66",
+                    "uuid": "e7a5261c-791a-49b8-bb1a-8e95f739c57e",
                     "name": "SG_PAAS_10.57.56.53",
                     "displayName": "SG_PAAS_10.57.56.53",
                     "extEpgType": "on-premise",
@@ -263,7 +263,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "27e4071e-531e-4364-83f9-29743a239b1c",
+                    "uuid": "c895a790-66a6-4bd5-af92-66eef5d03d01",
                     "name": "SG_PAAS_10.57.56.32",
                     "displayName": "SG_PAAS_10.57.56.32",
                     "extEpgType": "on-premise",
@@ -300,7 +300,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "3bb4ea7a-c58b-4352-84f4-0e32c7bffa4e",
+                    "uuid": "90cde0a8-3b13-4c24-a0b9-d78868a75a1a",
                     "name": "SG_PAAS_10.57.56.43",
                     "displayName": "SG_PAAS_10.57.56.43",
                     "extEpgType": "on-premise",
@@ -337,7 +337,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "fd7cb248-6d9d-46c7-b05d-f5e608baa850",
+                    "uuid": "00a72779-c980-43b4-9384-56cfe00e2e9f",
                     "name": "SG_PAAS_10.57.56.54",
                     "displayName": "SG_PAAS_10.57.56.54",
                     "extEpgType": "on-premise",
@@ -374,7 +374,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "49331b4e-8b10-4564-8189-8cb29f7a52ba",
+                    "uuid": "ea26f41e-430b-47c4-a1b6-a66dc28bc9a5",
                     "name": "SG_PAAS_10.57.56.101",
                     "displayName": "SG_PAAS_10.57.56.101",
                     "extEpgType": "on-premise",
@@ -411,7 +411,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "7387ce87-a7c4-41ff-acd1-b8e7258914a7",
+                    "uuid": "1883a151-81a2-401b-ae9f-0a414a58ddaf",
                     "name": "SG_PAAS_10.57.56.33",
                     "displayName": "SG_PAAS_10.57.56.33",
                     "extEpgType": "on-premise",
@@ -448,7 +448,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "91f539bc-663f-4459-b72f-7255d895cc5b",
+                    "uuid": "964f551c-2359-4924-90b8-4d897dd7b54e",
                     "name": "SG_PAAS_10.57.56.44",
                     "displayName": "SG_PAAS_10.57.56.44",
                     "extEpgType": "on-premise",
@@ -485,7 +485,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "519b00ee-d5bd-4c82-afe6-1ce5cc4e8580",
+                    "uuid": "0c3d86fe-9f60-4a0e-bb43-2189ef1ab9e8",
                     "name": "SG_PAAS_10.57.56.55",
                     "displayName": "SG_PAAS_10.57.56.55",
                     "extEpgType": "on-premise",
@@ -522,7 +522,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "fd82fdd8-db2e-40fb-9cad-d46835614f62",
+                    "uuid": "425b399c-5127-4f8e-86f1-a548c5095732",
                     "name": "SG_PAAS_10.57.56.102",
                     "displayName": "SG_PAAS_10.57.56.102",
                     "extEpgType": "on-premise",
@@ -559,7 +559,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "841ed6d3-9fbb-4ec4-9832-f1ad52c2ce84",
+                    "uuid": "d33df9ae-3002-4b82-9ffb-f8f31b0baa47",
                     "name": "SG_PAAS_10.57.56.34",
                     "displayName": "SG_PAAS_10.57.56.34",
                     "extEpgType": "on-premise",
@@ -596,7 +596,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "8c5172d2-4ca6-4e22-8d6f-8a9d33fc2a18",
+                    "uuid": "46de8de0-e105-467b-8a9e-47ef22531f0c",
                     "name": "SG_PAAS_10.57.56.45",
                     "displayName": "SG_PAAS_10.57.56.45",
                     "extEpgType": "on-premise",
@@ -633,7 +633,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "98832ac4-0105-4254-b2c7-a56ab3e01056",
+                    "uuid": "4953bb67-7bc8-4733-93e8-1a92b814ba80",
                     "name": "SG_PAAS_10.57.56.56",
                     "displayName": "SG_PAAS_10.57.56.56",
                     "extEpgType": "on-premise",
@@ -670,7 +670,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "31e8b9ca-0187-4415-aaa9-27b0db1d8989",
+                    "uuid": "acc6bad0-4d33-48e5-9dcb-ebe9b33d3807",
                     "name": "SG_PAAS_10.57.56.103",
                     "displayName": "SG_PAAS_10.57.56.103",
                     "extEpgType": "on-premise",
@@ -707,7 +707,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "0e8a232d-0181-4a66-b4b3-0e2ade0d6396",
+                    "uuid": "f38b1c1b-7a6c-4e24-93e5-d1d5d28a101d",
                     "name": "SG_PAAS_10.57.56.35",
                     "displayName": "SG_PAAS_10.57.56.35",
                     "extEpgType": "on-premise",
@@ -744,7 +744,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "65aee221-f3fc-415e-9a72-13c6d594fce9",
+                    "uuid": "7c99598d-acda-49b6-a91a-b94f6e28266b",
                     "name": "SG_PAAS_10.57.56.46",
                     "displayName": "SG_PAAS_10.57.56.46",
                     "extEpgType": "on-premise",
@@ -781,7 +781,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "857b4dd1-4cc0-4291-bc7d-8e6d7a680f6c",
+                    "uuid": "6f3f8258-0ada-4d73-acaf-8a29b4199906",
                     "name": "SG_PAAS_10.57.56.104",
                     "displayName": "SG_PAAS_10.57.56.104",
                     "extEpgType": "on-premise",
@@ -818,7 +818,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "7ab52b45-b863-4e01-8b88-b79cee1f384d",
+                    "uuid": "f879961e-9faf-4b04-83e8-fdde6519719c",
                     "name": "SG_PAAS_10.57.56.36",
                     "displayName": "SG_PAAS_10.57.56.36",
                     "extEpgType": "on-premise",
@@ -855,7 +855,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "8af882ca-f2fc-491a-ae0d-8da2fd1de052",
+                    "uuid": "5a0386dc-2bce-4d78-aa2c-38da676f9926",
                     "name": "SG_PAAS_10.57.56.105",
                     "displayName": "SG_PAAS_10.57.56.105",
                     "extEpgType": "on-premise",
@@ -892,7 +892,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "344c5d07-f2f0-40c1-85e4-e03ff5ea69d3",
+                    "uuid": "135f7131-6ec3-4dda-bf3e-cd6ec2d3a5cc",
                     "name": "SG_PAAS_10.57.56.106",
                     "displayName": "SG_PAAS_10.57.56.106",
                     "extEpgType": "on-premise",
@@ -929,7 +929,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "5228fda0-e172-4a86-8139-7ea062243cb6",
+                    "uuid": "c9181676-08d7-42ec-98c9-cea6f4ba67e3",
                     "name": "SG_PAAS_10.57.56.107",
                     "displayName": "SG_PAAS_10.57.56.107",
                     "extEpgType": "on-premise",
@@ -966,7 +966,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "04c5406b-5912-4cdd-a39e-65d81952810c",
+                    "uuid": "29afe651-3550-48d2-9982-6c893f6d5039",
                     "name": "L2198_L2199_L3OUT_TO_PAAS",
                     "displayName": "L2198_L2199_L3OUT_TO_PAAS",
                     "extEpgType": "on-premise",
@@ -999,7 +999,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "d526d62d-eefe-45dd-af3c-8006105ee398",
+                    "uuid": "a881c49f-1baf-4f42-b90b-db4b2e1979e7",
                     "name": "L2198_L2199_L3OUT_TO_IAAS",
                     "displayName": "L2198_L2199_L3OUT_TO_IAAS",
                     "extEpgType": "on-premise",
@@ -1022,7 +1022,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "b736a09e-0259-4694-99cb-e55cd56eee56",
+                    "uuid": "669024b2-ba23-4084-b5a2-d8dd16d88d23",
                     "name": "SG_PAAS_10.57.6.51",
                     "displayName": "SG_PAAS_10.57.6.51",
                     "extEpgType": "on-premise",
@@ -1059,7 +1059,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "91617c27-ed21-421c-a262-55f9e6ebd8ff",
+                    "uuid": "db56513b-1f54-486a-b3a7-27efe626528f",
                     "name": "SG_PAAS_10.57.6.41",
                     "displayName": "SG_PAAS_10.57.6.41",
                     "extEpgType": "on-premise",
@@ -1096,7 +1096,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "77a7166b-9e88-48da-a260-f561050306d4",
+                    "uuid": "0f6fe15b-3b6e-4eaf-bacb-d9da9f2f48f9",
                     "name": "SG_PAAS_10.57.6.52",
                     "displayName": "SG_PAAS_10.57.6.52",
                     "extEpgType": "on-premise",
@@ -1133,7 +1133,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "b075e12b-01a5-40ad-9ffc-4de5b405e328",
+                    "uuid": "4ab3bae0-ae86-41f4-8753-1e6f91228133",
                     "name": "SG_PAAS_10.57.6.31",
                     "displayName": "SG_PAAS_10.57.6.31",
                     "extEpgType": "on-premise",
@@ -1170,7 +1170,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "5bb3da65-c2cc-40fe-ae57-7da93db77822",
+                    "uuid": "5489eb62-9eac-4aa3-b865-0b8b03ee2958",
                     "name": "SG_PAAS_10.57.6.42",
                     "displayName": "SG_PAAS_10.57.6.42",
                     "extEpgType": "on-premise",
@@ -1207,7 +1207,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "e54beec2-a647-4133-922d-d47f0cd8f6f3",
+                    "uuid": "1f4110f8-0dd7-48c3-85c6-18823271f9d2",
                     "name": "SG_PAAS_10.57.6.53",
                     "displayName": "SG_PAAS_10.57.6.53",
                     "extEpgType": "on-premise",
@@ -1244,7 +1244,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "8e35ed74-6a80-43f2-9a07-ff3bc07d3fc9",
+                    "uuid": "98c48158-bed4-4ce7-bca9-50cfc466efa5",
                     "name": "SG_PAAS_10.57.6.32",
                     "displayName": "SG_PAAS_10.57.6.32",
                     "extEpgType": "on-premise",
@@ -1281,7 +1281,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "d36d8312-5e16-48ef-b725-af74e554a9f1",
+                    "uuid": "9f78ccb9-64b6-4ae1-a54c-6f23dbd24c13",
                     "name": "SG_PAAS_10.57.6.43",
                     "displayName": "SG_PAAS_10.57.6.43",
                     "extEpgType": "on-premise",
@@ -1318,7 +1318,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "ade1c4a9-9f0f-45b7-9dfd-e54ee57133ee",
+                    "uuid": "9477454e-9b2d-4ccf-9d09-304447dfc5fa",
                     "name": "SG_PAAS_10.57.6.54",
                     "displayName": "SG_PAAS_10.57.6.54",
                     "extEpgType": "on-premise",
@@ -1355,7 +1355,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "5f4d48c2-79fc-4338-9fc9-028f27104be8",
+                    "uuid": "0ac1078c-b4e3-4131-b004-1fafd7744a07",
                     "name": "SG_PAAS_10.57.6.33",
                     "displayName": "SG_PAAS_10.57.6.33",
                     "extEpgType": "on-premise",
@@ -1392,7 +1392,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "ec47af52-b509-4597-9d74-6433b377f668",
+                    "uuid": "48015c92-f69a-4e9c-807e-824a6a4954e6",
                     "name": "SG_PAAS_10.57.6.44",
                     "displayName": "SG_PAAS_10.57.6.44",
                     "extEpgType": "on-premise",
@@ -1429,7 +1429,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "d41aacf9-7ef7-4081-a777-2cf2478c4edd",
+                    "uuid": "5609fb66-781f-48a6-838d-7079496a1df7",
                     "name": "SG_PAAS_10.57.6.55",
                     "displayName": "SG_PAAS_10.57.6.55",
                     "extEpgType": "on-premise",
@@ -1466,7 +1466,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "1679c026-8b78-40b1-8c1b-c4a91c0c0162",
+                    "uuid": "93d069e4-ae76-4e7c-abf3-07bc91708230",
                     "name": "SG_PAAS_10.57.6.34",
                     "displayName": "SG_PAAS_10.57.6.34",
                     "extEpgType": "on-premise",
@@ -1503,7 +1503,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "5cc94b45-0018-4731-8676-09444de44ccf",
+                    "uuid": "dcc58ce1-69e4-4208-a2f3-269d989a9ae8",
                     "name": "SG_PAAS_10.57.6.45",
                     "displayName": "SG_PAAS_10.57.6.45",
                     "extEpgType": "on-premise",
@@ -1540,7 +1540,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "921ebe46-d0af-4724-895c-778c9407f931",
+                    "uuid": "24391e79-6286-4506-b1b7-1bafde6e58ab",
                     "name": "SG_PAAS_10.57.6.56",
                     "displayName": "SG_PAAS_10.57.6.56",
                     "extEpgType": "on-premise",
@@ -1577,7 +1577,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "1423c3a3-122a-4e52-ab4b-fdfec49e11a5",
+                    "uuid": "4cbafa84-a342-4ef3-98f1-87ffcf61c4f9",
                     "name": "SG_PAAS_10.57.6.35",
                     "displayName": "SG_PAAS_10.57.6.35",
                     "extEpgType": "on-premise",
@@ -1614,7 +1614,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "7d6d6b29-62cb-49a6-b096-a7e59240216d",
+                    "uuid": "d3c2321c-8c7b-4617-9c56-feea22b557dd",
                     "name": "SG_PAAS_10.57.6.46",
                     "displayName": "SG_PAAS_10.57.6.46",
                     "extEpgType": "on-premise",
@@ -1651,7 +1651,7 @@
                     "description": ""
                 },
                 {
-                    "uuid": "d95a6824-7fd3-498e-93b1-e34f713e0b86",
+                    "uuid": "ab4637a9-9946-4e6e-90e2-31d9bb0d485d",
                     "name": "SG_PAAS_10.57.6.36",
                     "displayName": "SG_PAAS_10.57.6.36",
                     "extEpgType": "on-premise",
@@ -1686,95 +1686,13 @@
                     "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.36",
                     "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
                     "description": ""
-                },
-                {
-                    "uuid": "2c57dc16-4758-4517-8ff2-7233dd0fee01",
-                    "name": "SG_PAAS_INFO",
-                    "displayName": "SG_PAAS_INFO",
-                    "extEpgType": "on-premise",
-                    "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
-                    "subnets": [
-                        {
-                            "ip": "10.57.106.31/32",
-                            "scope": [
-                                "shared-rtctrl",
-                                "shared-security",
-                                "import-security"
-                            ],
-                            "aggregate": []
-                        },
-                        {
-                            "ip": "10.57.106.32/32",
-                            "scope": [
-                                "shared-rtctrl",
-                                "shared-security",
-                                "import-security"
-                            ],
-                            "aggregate": []
-                        },
-                        {
-                            "ip": "10.57.106.33/32",
-                            "scope": [
-                                "shared-rtctrl",
-                                "shared-security",
-                                "import-security"
-                            ],
-                            "aggregate": []
-                        },
-                        {
-                            "ip": "10.57.106.34/32",
-                            "scope": [
-                                "shared-rtctrl",
-                                "shared-security",
-                                "import-security"
-                            ],
-                            "aggregate": []
-                        },
-                        {
-                            "ip": "10.57.106.35/32",
-                            "scope": [
-                                "shared-rtctrl",
-                                "shared-security",
-                                "import-security"
-                            ],
-                            "aggregate": []
-                        },
-                        {
-                            "ip": "10.57.106.36/32",
-                            "scope": [
-                                "shared-rtctrl",
-                                "shared-security",
-                                "import-security"
-                            ],
-                            "aggregate": null
-                        }
-                    ],
-                    "selectors": [],
-                    "contractRelationships": [
-                        {
-                            "relationshipType": "provider",
-                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
-                        },
-                        {
-                            "relationshipType": "consumer",
-                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_SG_PAAS_INFO"
-                        },
-                        {
-                            "relationshipType": "consumer",
-                            "contractRef": "/schemas/64a4c8769e9f900000000100/templates/BIZ-TST-common-AC/contracts/BIZ_TST_SERVICE"
-                        }
-                    ],
-                    "preferredGroup": false,
-                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_INFO",
-                    "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
-                    "description": ""
                 }
             ],
             "filters": [],
             "intersiteL3outs": [
                 {
                     "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_IAAS",
-                    "uuid": "e5bac8d3-b5f0-420a-b7db-018da37e0929",
+                    "uuid": "faf05f76-811f-46a8-82f9-88b8ef2b2747",
                     "name": "L2198_L2199_L3OUT_TO_IAAS",
                     "displayName": "L2198_L2199_L3OUT_TO_IAAS",
                     "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
@@ -1783,7 +1701,7 @@
                 },
                 {
                     "l3outRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/l3outs/L2198_L2199_L3OUT_TO_PAAS",
-                    "uuid": "f4feaad3-7659-42ae-947d-ccb1f9112db9",
+                    "uuid": "4e603876-7794-4735-88e8-d0be8ac0cb7f",
                     "name": "L2198_L2199_L3OUT_TO_PAAS",
                     "displayName": "L2198_L2199_L3OUT_TO_PAAS",
                     "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
@@ -1795,7 +1713,7 @@
             "serviceGraphs": [],
             "vrfs": [
                 {
-                    "uuid": "a14a0868-2133-4895-b880-2e5c66e26ad3",
+                    "uuid": "8b8487a2-08f0-428d-a96f-cac3c7678a79",
                     "name": "BIZ_TST_NSX_VRF",
                     "displayName": "BIZ_TST_NSX_VRF",
                     "vrfRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/vrfs/BIZ_TST_NSX_VRF",
@@ -1829,12 +1747,12 @@
             ],
             "templateType": "stretched-template",
             "description": "",
-            "version": 3
+            "version": 1
         }
     ],
     "sites": [
         {
-            "siteId": "64ab565f868d2235b43896e5",
+            "siteId": "64b3dacb4aeb77656bd0008c",
             "templateName": "BIZ-TST-NSX-AC",
             "templateID": "64a4c8769e9f900000000201",
             "anps": [
@@ -2145,12 +2063,6 @@
                 },
                 {
                     "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_10.57.6.36",
-                    "l3outDn": "",
-                    "subnets": [],
-                    "routeReachabilityInternetType": "internet"
-                },
-                {
-                    "externalEpgRef": "/schemas/64a4c8769e9f900000000200/templates/BIZ-TST-NSX-AC/externalEpgs/SG_PAAS_INFO",
                     "l3outDn": "",
                     "subnets": [],
                     "routeReachabilityInternetType": "internet"

@@ -10,7 +10,9 @@ type User struct {
 	Age  int    `json:"age" binding:"required"`
 }
 
-var users = []User{}
+var users = []User{
+	{Name: "test", Age: 11},
+}
 
 func main() {
 	r := setupRouter()
@@ -41,11 +43,11 @@ func PostUser(c *gin.Context) {
 
 	var newUser User
 
-	err := c.ShouldBindJSON(newUser)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
+	//err := c.ShouldBindJSON(newUser)
+	//if err != nil {
+	//	c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	//	return
+	//}
 
 	if err := c.BindJSON(&newUser); err != nil {
 		return
