@@ -3,10 +3,20 @@ package main
 import (
 	"bytes"
 	"crypto/tls"
+	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 )
+
+type NdoLogin struct {
+	Jwttoken   string `json:"jwttoken"`
+	Username   string `json:"username"`
+	Usertype   string
+	Rbac       string
+	StatusCode string
+	Token      string
+}
 
 func main() {
 
@@ -31,10 +41,18 @@ func main() {
 
 	defer resp.Body.Close()
 
-	respBody, err := ioutil.ReadAll(resp.Body)
+	respBody, err := io.ReadAll(resp.Body)
 	if err == nil {
 		str := string(respBody)
 		println(str)
 	}
 
+	var ndoLogin = NdoLogin{}
+
+	// parse JSON string to login response struct
+	err = json.Unmarshal(respBody, &ndoLogin)
+	if err != nil {
+		return
+	}
+	fmt.Printf("[%s]", ndoLogin)
 }
