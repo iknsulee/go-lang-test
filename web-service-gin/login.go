@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 )
 
@@ -14,7 +15,7 @@ type NdoLogin struct {
 	Username   string `json:"username"`
 	Usertype   string
 	Rbac       string
-	StatusCode string
+	StatusCode int
 	Token      string
 }
 
@@ -52,7 +53,16 @@ func main() {
 	// parse JSON string to login response struct
 	err = json.Unmarshal(respBody, &ndoLogin)
 	if err != nil {
+		panic(err)
 		return
 	}
 	fmt.Printf("[%s]", ndoLogin)
+
+	//MarshalIndent
+	ndoLoginString, err := json.MarshalIndent(ndoLogin, "", "  ")
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	fmt.Printf("MarshalIndent funnction output %s\n", string(ndoLoginString))
+
 }
