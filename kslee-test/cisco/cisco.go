@@ -111,7 +111,32 @@ func postHttp(url string, reqBody string) (int, string) {
 	return httpResponse.StatusCode, httpResponseString
 }
 
-func isSessionExpired(statusCode int) bool {
+func deleteHttp(url string, reqBody string) (int, string) {
+	req, err := http.NewRequest("DELETE", url, nil)
+	if err != nil {
+		panic(err)
+	}
+	req.Header.Add("Authorization", "Bearer "+AciNdoLogin.Jwttoken)
+
+	transCfg := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true}, // ignore expired SSL certificates
+	}
+	client := &http.Client{Transport: transCfg}
+
+	// Client 객체에서 Request 실행
+	httpResponse, err := client.Do(req)
+	if err != nil {
+		panic(err)
+	}
+	defer httpResponse.Body.Close()
+
+	var bodyBytes, _ = io.ReadAll(httpResponse.Body)
+	var httpResponseString = string(bodyBytes) //바이트를 문자열로
+	//return httpResponse, bodyBytes, httpResponseString
+	return httpResponse.StatusCode, httpResponseString
+}
+
+func IsSessionExpired(statusCode int) bool {
 	if statusCode == 401 {
 		// 응답코드가 401 이면 유효기간 만료, 빈토큰 값 등 다시 로그인해서 토큰을 받아와야 하는 상황이다.
 		LoginDCloud()
@@ -121,44 +146,10 @@ func isSessionExpired(statusCode int) bool {
 	}
 }
 
-func CreateTenant() (int, string, error) {
-	var statusCode, httpResponse = _createTenant()
-
-	if isSessionExpired(statusCode) {
-		statusCode, httpResponse = _createTenant()
-	}
-
-	return statusCode, httpResponse, nil
-}
-
-func _createTenant() (int, string) {
-	var reqTenant = `{
-		"name": "kslee-test",
-		"displayName": "kslee-test",
-		"siteAssociations": [
-			{
-				"siteId": "64b8f2a376fa8d974ea1238a"
-		   },
-			{
-				"siteId": "64b8f2b576fa8d974ea1238b"
-			}
-		],
-		"userAssociations": [
-			{
-				"userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
-			}
-		],
-		"_updateVersion": 0
-	}`
-
-	return postHttp("https://198.18.133.100/mso/api/v1/tenants", reqTenant)
-
-}
-
 func GetAllSitesInfo() (int, string, error) {
 	var statusCode, httpResponse = _getAllSitesInfo()
 
-	if isSessionExpired(statusCode) {
+	if IsSessionExpired(statusCode) {
 		statusCode, httpResponse = _getAllSitesInfo()
 	}
 
@@ -168,18 +159,8 @@ func GetAllSitesInfo() (int, string, error) {
 func GetAllUserInfo() (int, string, error) {
 	var statusCode, httpResponse = _getAllUserInfo()
 
-	if isSessionExpired(statusCode) {
+	if IsSessionExpired(statusCode) {
 		statusCode, httpResponse = _getAllUserInfo()
-	}
-
-	return statusCode, httpResponse, nil
-}
-
-func GetAllTenants() (int, string, error) {
-	var statusCode, httpResponse = _getAllTenants()
-
-	if isSessionExpired(statusCode) {
-		statusCode, httpResponse = _getAllTenants()
 	}
 
 	return statusCode, httpResponse, nil
@@ -191,8 +172,4 @@ func _getAllSitesInfo() (int, string) {
 
 func _getAllUserInfo() (int, string) {
 	return getHttp("https://198.18.133.100/mso/api/v1/users")
-}
-
-func _getAllTenants() (int, string) {
-	return getHttp("https://198.18.133.100/mso/api/v1/tenants")
 }

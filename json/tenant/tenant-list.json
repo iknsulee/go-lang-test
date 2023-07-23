@@ -6,7 +6,7 @@
       "displayName": "common",
       "siteAssociations": [
         {
-          "siteId": "64ab567d868d2235b43896e6",
+          "siteId": "64b8f2b576fa8d974ea1238b",
           "securityDomains": [],
           "azureAccount": [],
           "awsAccount": [],
@@ -14,7 +14,7 @@
           "gatewayRouter": []
         },
         {
-          "siteId": "64ab565f868d2235b43896e5",
+          "siteId": "64b8f2a376fa8d974ea1238a",
           "securityDomains": [],
           "azureAccount": [],
           "awsAccount": [],
@@ -60,43 +60,12 @@
       "_versionDefaulted": false
     },
     {
-      "id": "64ab575c2f41abba8e1a7221",
-      "name": "kslee-tenant",
-      "displayName": "kslee-tenant",
-      "siteAssociations": [
-        {
-          "siteId": "64ab567d868d2235b43896e6",
-          "securityDomains": [],
-          "azureAccount": [],
-          "awsAccount": [],
-          "gcpAccount": [],
-          "gatewayRouter": []
-        },
-        {
-          "siteId": "64ab565f868d2235b43896e5",
-          "securityDomains": [],
-          "azureAccount": [],
-          "awsAccount": [],
-          "gcpAccount": [],
-          "gatewayRouter": []
-        }
-      ],
-      "userAssociations": [
-        {
-          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
-        }
-      ],
-      "description": "",
-      "_updateVersion": 0,
-      "_versionDefaulted": false
-    },
-    {
       "id": "64a4c8769e9f900000000001",
       "name": "BIZ-TST-NSX",
       "displayName": "BIZ-TST-NSX",
       "siteAssociations": [
         {
-          "siteId": "64ab565f868d2235b43896e5",
+          "siteId": "64b8f2a376fa8d974ea1238a",
           "securityDomains": [],
           "azureAccount": [],
           "awsAccount": [],
@@ -104,7 +73,7 @@
           "gatewayRouter": []
         },
         {
-          "siteId": "64ab567d868d2235b43896e6",
+          "siteId": "64b8f2b576fa8d974ea1238b",
           "securityDomains": [],
           "azureAccount": [],
           "awsAccount": [],
@@ -127,7 +96,7 @@
       "displayName": "BIZ-TST-ACI",
       "siteAssociations": [
         {
-          "siteId": "64ab565f868d2235b43896e5",
+          "siteId": "64b8f2a376fa8d974ea1238a",
           "securityDomains": [],
           "azureAccount": [],
           "awsAccount": [],
@@ -135,7 +104,100 @@
           "gatewayRouter": []
         },
         {
-          "siteId": "64ab567d868d2235b43896e6",
+          "siteId": "64b8f2b576fa8d974ea1238b",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "64ba06002b1d99f839619b18",
+      "name": "IB-LOC-ACI",
+      "displayName": "IB-LOC-ACI",
+      "siteAssociations": [
+        {
+          "siteId": "64b8f2b576fa8d974ea1238b",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64b8f2a376fa8d974ea1238a",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "64ba06192b1d99f839619b19",
+      "name": "IB-LOC-NSX",
+      "displayName": "IB-LOC-NSX",
+      "siteAssociations": [
+        {
+          "siteId": "64b8f2b576fa8d974ea1238b",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64b8f2a376fa8d974ea1238a",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        }
+      ],
+      "userAssociations": [
+        {
+          "userId": "48d105bdfbc49a5fcf39a10b961386e61dfe40085cb0315d818b761c5735dafa"
+        }
+      ],
+      "description": "",
+      "_updateVersion": 0,
+      "_versionDefaulted": false
+    },
+    {
+      "id": "64bd210a2b1d99f839619b41",
+      "name": "kslee-test",
+      "displayName": "kslee-test",
+      "siteAssociations": [
+        {
+          "siteId": "64b8f2a376fa8d974ea1238a",
+          "securityDomains": [],
+          "azureAccount": [],
+          "awsAccount": [],
+          "gcpAccount": [],
+          "gatewayRouter": []
+        },
+        {
+          "siteId": "64b8f2b576fa8d974ea1238b",
           "securityDomains": [],
           "azureAccount": [],
           "awsAccount": [],

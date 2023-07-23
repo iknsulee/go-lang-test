@@ -1,10 +1,27 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"ksleemodule/cisco"
+	"ksleemodule/cisco/tenant"
 	"ksleemodule/ksleeutility"
+	"strings"
 )
+
+type Tenant struct {
+	Id          string `json:"id"`
+	Name        string `json:"name"`
+	DisplayName string `json:"displayName"`
+	//SiteAssociation   string `json:"id"`
+	Description      string `json:"description"`
+	UpdateVersion    int    `json:"_updateVersion"`
+	VersionDefaulted bool   `json:"_versionDefaulted"`
+}
+
+type TenantInfo struct {
+	Tenants []Tenant `json:"tenants"`
+}
 
 func main() {
 
@@ -20,15 +37,41 @@ func main() {
 	}
 	fmt.Printf("[%d][%s]\n", statusCode, ksleeutility.GetPrettyStringFromJSONString(responseString))
 
-	statusCode, responseString, err = cisco.GetAllTenants()
+	statusCode, responseString, err = tenant.GetAllTenants()
 	if err != nil {
 		panic("GetAllTenants")
 	}
 	fmt.Printf("[%d][%s]\n", statusCode, ksleeutility.GetPrettyStringFromJSONString(responseString))
 
-	statusCode, responseString, err = cisco.CreateTenant()
+	statusCode, responseString, err = tenant.CreateTenant()
 	if err != nil {
 		panic("CreateTenant")
+	}
+	fmt.Printf("[%d][%s]\n", statusCode, ksleeutility.GetPrettyStringFromJSONString(responseString))
+
+	statusCode, responseString, err = tenant.GetAllTenants()
+	if err != nil {
+		panic("GetAllTenants")
+	}
+	fmt.Printf("[%d][%s]\n", statusCode, ksleeutility.GetPrettyStringFromJSONString(responseString))
+	var tenantInfo TenantInfo
+	err = json.Unmarshal([]byte(responseString), &tenantInfo)
+	if err != nil {
+		return
+	}
+
+	var targetTenant Tenant
+	for _, tenant := range tenantInfo.Tenants {
+		if strings.Compare(tenant.Name, "kslee-test") == 0 {
+			targetTenant = tenant
+			break
+		}
+	}
+	ksleeutility.PrintPrettyStruct("Target Tenant", targetTenant)
+
+	statusCode, responseString, err = tenant.DeleteTenant(targetTenant.Id)
+	if err != nil {
+		panic("DeleteTenant")
 	}
 	fmt.Printf("[%d][%s]\n", statusCode, ksleeutility.GetPrettyStringFromJSONString(responseString))
 
