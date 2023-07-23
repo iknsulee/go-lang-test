@@ -2,11 +2,8 @@ package main
 
 import (
 	"fmt"
-	"kslee/cisco"
-	_ "kslee/cisco"
-	_ "kslee/ksleelogin"
-	"kslee/ksleeutility"
-	_ "kslee/ksleeutility"
+	"ksleemodule/cisco"
+	"ksleemodule/ksleeutility"
 )
 
 func main() {

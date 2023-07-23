@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"kslee/ksleeutility"
+	"ksleemodule/ksleeutility"
 	"net/http"
 )
 
@@ -85,8 +85,8 @@ func GetAllSitesInfo() (int, string, error) {
 	}
 	defer httpResponse.Body.Close()
 
-	bytes, _ := io.ReadAll(httpResponse.Body)
-	httpResponseString := string(bytes) //바이트를 문자열로
+	bodyBytes, _ := io.ReadAll(httpResponse.Body)
+	httpResponseString := string(bodyBytes) //바이트를 문자열로
 
 	return httpResponse.StatusCode, httpResponseString, nil
 }
