@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"ksleemodule/cisco"
+	"ksleemodule/cisco/schema"
 	"ksleemodule/cisco/tenant"
 	"ksleemodule/ksleeutility"
 	"strings"
@@ -61,13 +62,67 @@ func main() {
 	}
 
 	var targetTenant Tenant
-	for _, tenant := range tenantInfo.Tenants {
-		if strings.Compare(tenant.Name, "kslee-test") == 0 {
-			targetTenant = tenant
+	for _, _tenant := range tenantInfo.Tenants {
+		if strings.Compare(_tenant.Name, "kslee-test") == 0 {
+			targetTenant = _tenant
 			break
 		}
 	}
 	ksleeutility.PrintPrettyStruct("Target Tenant", targetTenant)
+
+	var _schema = schema.Schema{}
+	_schema.DisplayName = "kslee-test"
+
+	_schema.Templates = make([]schema.Template, 2)
+
+	_schema.Templates[0].Name = "kslee-test-AC"
+	_schema.Templates[0].DisplayName = "kslee-test-AC"
+	_schema.Templates[0].TenantID = targetTenant.Id
+	_schema.Templates[0].TemplateType = "stretched-template"
+
+	_schema.Templates[0].Anps = make([]schema.Anp, 1)
+	_schema.Templates[0].Anps[0].Name = "kslee-test"
+	_schema.Templates[0].Anps[0].DisplayName = "kslee-test"
+
+	_schema.Templates[0].Vrfs = make([]schema.Vrf, 1)
+	_schema.Templates[0].Vrfs[0].Name = "kslee-test-AC_VRF"
+	_schema.Templates[0].Vrfs[0].DisplayName = "kslee-test-AC_VRF"
+
+	_schema.Templates[0].Vrfs[0].AutoRouteTargetImport = make([]schema.AutoRouteTargetImport, 1)
+	_schema.Templates[0].Vrfs[0].AutoRouteTargetImport[0].Aci = "route-target:as4-nn2:16777227:30780"
+	_schema.Templates[0].Vrfs[0].AutoRouteTargetExport = make([]schema.AutoRouteTargetExport, 1)
+	_schema.Templates[0].Vrfs[0].AutoRouteTargetExport[0].Aci = "route-target:as4-nn2:16777226:30780"
+
+	_schema.Templates[1].Name = "kslee-test-BC"
+	_schema.Templates[1].DisplayName = "kslee-test-BC"
+	_schema.Templates[1].TenantID = targetTenant.Id
+	_schema.Templates[1].TemplateType = "stretched-template"
+
+	_schema.Templates[1].Anps = make([]schema.Anp, 1)
+	_schema.Templates[1].Anps[0].Name = "kslee-test"
+	_schema.Templates[1].Anps[0].DisplayName = "kslee-test"
+
+	_schema.Templates[1].Vrfs = make([]schema.Vrf, 1)
+	_schema.Templates[1].Vrfs[0].Name = "kslee-test-BC_VRF"
+	_schema.Templates[1].Vrfs[0].DisplayName = "kslee-test-BC_VRF"
+
+	_schema.Templates[1].Vrfs[0].AutoRouteTargetImport = make([]schema.AutoRouteTargetImport, 1)
+	_schema.Templates[1].Vrfs[0].AutoRouteTargetImport[0].Aci = "route-target:as4-nn2:16777229:30780"
+	_schema.Templates[1].Vrfs[0].AutoRouteTargetExport = make([]schema.AutoRouteTargetExport, 1)
+	_schema.Templates[1].Vrfs[0].AutoRouteTargetExport[0].Aci = "route-target:as4-nn2:16777228:30780"
+
+	_schema.Sites = make([]schema.Site, 2)
+	_schema.Sites[0].SiteID = "64b8f2a376fa8d974ea1238a"
+	_schema.Sites[0].TemplateName = "kslee-test-AC"
+
+	_schema.Sites[1].SiteID = "64b8f2b576fa8d974ea1238b"
+	_schema.Sites[1].TemplateName = "kslee-test-BC"
+
+	statusCode, responseString, err = schema.CreateSchema(_schema)
+	if err != nil {
+		panic("CreateSchema")
+	}
+	fmt.Printf("[%d][%s]\n", statusCode, ksleeutility.GetPrettyStringFromJSONString(responseString))
 
 	statusCode, responseString, err = tenant.DeleteTenant(targetTenant.Id)
 	if err != nil {

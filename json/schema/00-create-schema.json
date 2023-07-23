@@ -1,0 +1,71 @@
+{
+    "displayName": "kslee-test",
+    "templates": [
+        {
+            "name": "kslee-test-AC",
+            "displayName": "kslee-test-AC",
+            "tenantId": "64bd30dd2b1d99f839619b4e",
+            "templateType": "stretched-template",
+            "anps": [
+                {
+                    "name": "kslee-test",
+                    "displayName": "kslee-test"
+                }
+            ],
+            "vrfs": [
+                {
+                    "name": "kslee-test-AC_VRF",
+                    "displayName": "kslee-test-AC_VRF",
+                    "autoRouteTargetImport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777227:30780"
+                        }
+                    ],
+                    "autoRouteTargetExport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777226:30780"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "kslee-test-BC",
+            "displayName": "kslee-test-BC",
+            "tenantId": "64bd30dd2b1d99f839619b4e",
+            "templateType": "stretched-template",
+            "anps": [
+                {
+                    "name": "kslee-test",
+                    "displayName": "kslee-test"
+                }
+            ],
+            "vrfs": [
+                {
+                    "name": "kslee-test-BC_VRF",
+                    "displayName": "kslee-test-BC_VRF",
+                    "autoRouteTargetImport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777229:30780"
+                        }
+                    ],
+                    "autoRouteTargetExport": [
+                        {
+                            "aci": "route-target:as4-nn2:16777228:30780"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "sites": [
+        {
+            "siteId": "64b8f2a376fa8d974ea1238a",
+            "templateName": "kslee-test-AC"
+        },
+        {
+            "siteId": "64b8f2b576fa8d974ea1238b",
+            "templateName": "kslee-test-BC"
+        }
+    ]
+}
