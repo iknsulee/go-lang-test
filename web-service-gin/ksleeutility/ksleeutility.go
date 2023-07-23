@@ -1,6 +1,7 @@
 package ksleeutility
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -15,4 +16,12 @@ func PrintPrettyStruct(title string, v any) {
 	}
 	fmt.Printf("%s[%s]\n", title, string(anyString))
 
+}
+
+func GetPrettyStringFromJSONString(str string) string {
+	var prettyJSON bytes.Buffer
+	if err := json.Indent(&prettyJSON, []byte(str), "", "    "); err != nil {
+		return ""
+	}
+	return prettyJSON.String()
 }

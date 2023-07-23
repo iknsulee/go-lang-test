@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/tls"
 	"encoding/json"
+	"fmt"
 	"io"
 	"kslee/ksleeutility"
 	"net/http"
@@ -58,4 +59,34 @@ func LoginDCloud() {
 	// 구조체를 예쁘게 JSON 형식으로 출력하기 위한 함수
 	ksleeutility.PrintPrettyStruct("set global ACINDOLogin variable: ", AciNdoLogin)
 
+}
+
+func GetAllSitesInfo() (int, string, error) {
+
+	fmt.Printf("------------------------------------------------------------\n")
+	fmt.Printf("Get all sites information\n")
+	fmt.Printf("------------------------------------------------------------\n")
+	req, err := http.NewRequest("GET", "https://198.18.133.100/mso/api/v2/sites", nil)
+	if err != nil {
+		panic(err)
+	}
+	req.Header.Add("Authorization", "Bearer "+AciNdoLogin.Jwttoken)
+
+	transCfg := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true}, // ignore expired SSL certificates
+	}
+	client := &http.Client{Transport: transCfg}
+	//client := &http.Client{}
+
+	// Client 객체에서 Request 실행
+	httpResponse, err := client.Do(req)
+	if err != nil {
+		panic(err)
+	}
+	defer httpResponse.Body.Close()
+
+	bytes, _ := io.ReadAll(httpResponse.Body)
+	httpResponseString := string(bytes) //바이트를 문자열로
+
+	return httpResponse.StatusCode, httpResponseString, nil
 }
