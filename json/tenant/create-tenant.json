@@ -1,0 +1,19 @@
+{
+  "name": "kslee-test",
+  "displayName": "kslee-test",
+  "description": "This is the description",
+  "siteAssociations": [
+    {
+      "siteId": "{{site-id-AC}}"
+    },
+    {
+      "siteId": "{{site-id-BC}}"
+    }
+  ],
+  "userAssociations": [
+    {
+      "userId": "{{user-id}}"
+    }
+  ],
+  "_updateVersion": 0
+}
