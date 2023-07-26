@@ -1,0 +1,235 @@
+{
+    "schemas": [
+        {
+            "id": "64a4c8769e9f900000000100",
+            "displayName": "BIZ-TST-common",
+            "templates": [
+                {
+                    "name": "BIZ-TST-common-AC",
+                    "displayName": "BIZ-TST-common-AC",
+                    "tenantId": "0000ffff0000000000000010",
+                    "templateID": "64a4c8769e9f900000000101",
+                    "anps": [],
+                    "bds": [],
+                    "contracts": [],
+                    "externalEpgs": [],
+                    "filters": [],
+                    "intersiteL3outs": [],
+                    "networks": [],
+                    "serviceGraphs": [],
+                    "vrfs": [],
+                    "templateType": "stretched-template",
+                    "description": "",
+                    "version": 0
+                }
+            ],
+            "sites": [
+                {
+                    "siteId": "64bf870b51da8d2bf8e7ed33",
+                    "templateName": "BIZ-TST-common-AC",
+                    "templateID": "64a4c8769e9f900000000101",
+                    "anps": [],
+                    "vrfs": [],
+                    "bds": [],
+                    "contracts": [],
+                    "externalEpgs": [],
+                    "serviceGraphs": [],
+                    "intersiteL3outs": [],
+                    "networks": []
+                }
+            ],
+            "summary": {
+                "numOfPolicies": 0,
+                "templates": [
+                    {
+                        "anps": {
+                            "count": 0
+                        },
+                        "epgs": {
+                            "count": 0
+                        },
+                        "vrfs": {
+                            "count": 0
+                        },
+                        "bds": {
+                            "count": 0
+                        },
+                        "contracts": {
+                            "count": 0
+                        },
+                        "filters": {
+                            "count": 0
+                        },
+                        "externalEpgs": {
+                            "count": 0
+                        },
+                        "serviceGraphs": {
+                            "count": 0
+                        },
+                        "intersiteL3outs": {
+                            "count": 0
+                        },
+                        "networks": {
+                            "count": 0
+                        }
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "id": "64a4c8769e9f900000000200",
+            "displayName": "BIZ-TST-NSX",
+            "templates": [
+                {
+                    "name": "BIZ-TST-NSX-AC",
+                    "displayName": "BIZ-TST-NSX-AC",
+                    "tenantId": "64be21d32b1d99f839619be2",
+                    "templateID": "64a4c8769e9f900000000201",
+                    "anps": [],
+                    "bds": [],
+                    "contracts": [],
+                    "externalEpgs": [],
+                    "filters": [],
+                    "intersiteL3outs": [],
+                    "networks": [],
+                    "serviceGraphs": [],
+                    "vrfs": [],
+                    "templateType": "stretched-template",
+                    "description": "",
+                    "version": 2
+                }
+            ],
+            "sites": [
+                {
+                    "siteId": "64bf870b51da8d2bf8e7ed33",
+                    "templateName": "BIZ-TST-NSX-AC",
+                    "templateID": "64a4c8769e9f900000000201",
+                    "anps": [],
+                    "vrfs": [],
+                    "bds": [],
+                    "contracts": [],
+                    "externalEpgs": [],
+                    "serviceGraphs": [],
+                    "intersiteL3outs": [],
+                    "networks": []
+                }
+            ],
+            "summary": {
+                "numOfPolicies": 0,
+                "templates": [
+                    {
+                        "anps": {
+                            "count": 0
+                        },
+                        "epgs": {
+                            "count": 0
+                        },
+                        "vrfs": {
+                            "count": 0
+                        },
+                        "bds": {
+                            "count": 0
+                        },
+                        "contracts": {
+                            "count": 0
+                        },
+                        "filters": {
+                            "count": 0
+                        },
+                        "externalEpgs": {
+                            "count": 0
+                        },
+                        "serviceGraphs": {
+                            "count": 0
+                        },
+                        "intersiteL3outs": {
+                            "count": 0
+                        },
+                        "networks": {
+                            "count": 0
+                        }
+                    }
+                ]
+            },
+            "description": ""
+        },
+        {
+            "id": "64a4c8769e9f900000000300",
+            "displayName": "BIZ-TST-ACI",
+            "templates": [
+                {
+                    "name": "BIZ-TST-ACI-AC",
+                    "displayName": "BIZ-TST-ACI-AC",
+                    "tenantId": "64be21de2b1d99f839619be3",
+                    "templateID": "64a4c8769e9f900000000301",
+                    "anps": [],
+                    "bds": [],
+                    "contracts": [],
+                    "externalEpgs": [],
+                    "filters": [],
+                    "intersiteL3outs": [],
+                    "networks": [],
+                    "serviceGraphs": [],
+                    "vrfs": [],
+                    "templateType": "stretched-template",
+                    "description": "",
+                    "version": 0
+                }
+            ],
+            "sites": [
+                {
+                    "siteId": "64bf870b51da8d2bf8e7ed33",
+                    "templateName": "BIZ-TST-ACI-AC",
+                    "templateID": "64a4c8769e9f900000000301",
+                    "anps": [],
+                    "vrfs": [],
+                    "bds": [],
+                    "contracts": [],
+                    "externalEpgs": [],
+                    "serviceGraphs": [],
+                    "intersiteL3outs": [],
+                    "networks": []
+                }
+            ],
+            "summary": {
+                "numOfPolicies": 0,
+                "templates": [
+                    {
+                        "anps": {
+                            "count": 0
+                        },
+                        "epgs": {
+                            "count": 0
+                        },
+                        "vrfs": {
+                            "count": 0
+                        },
+                        "bds": {
+                            "count": 0
+                        },
+                        "contracts": {
+                            "count": 0
+                        },
+                        "filters": {
+                            "count": 0
+                        },
+                        "externalEpgs": {
+                            "count": 0
+                        },
+                        "serviceGraphs": {
+                            "count": 0
+                        },
+                        "intersiteL3outs": {
+                            "count": 0
+                        },
+                        "networks": {
+                            "count": 0
+                        }
+                    }
+                ]
+            },
+            "description": ""
+        }
+    ]
+}

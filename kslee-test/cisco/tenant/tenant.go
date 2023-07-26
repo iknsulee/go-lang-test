@@ -5,6 +5,28 @@ import (
 	"ksleemodule/kslee/http"
 )
 
+type CampTenant struct {
+	Tenants []struct {
+		ID               string `json:"id"`
+		Name             string `json:"name"`
+		DisplayName      string `json:"displayName"`
+		SiteAssociations []struct {
+			SiteID          string `json:"siteId"`
+			SecurityDomains []any  `json:"securityDomains"`
+			AzureAccount    []any  `json:"azureAccount"`
+			AwsAccount      []any  `json:"awsAccount"`
+			GcpAccount      []any  `json:"gcpAccount"`
+			GatewayRouter   []any  `json:"gatewayRouter"`
+		} `json:"siteAssociations"`
+		UserAssociations []struct {
+			UserID string `json:"userId"`
+		} `json:"userAssociations"`
+		Description      string `json:"description"`
+		UpdateVersion    int    `json:"_updateVersion"`
+		VersionDefaulted bool   `json:"_versionDefaulted"`
+	} `json:"tenants"`
+}
+
 func CreateTenant() (int, string, error) {
 	var statusCode, httpResponse = _createTenant()
 
@@ -21,10 +43,10 @@ func _createTenant() (int, string) {
 		"displayName": "kslee-test",
 		"siteAssociations": [
 			{
-				"siteId": "64b8f2a376fa8d974ea1238a"
+				"siteId": "64bf870b51da8d2bf8e7ed33"
 		   },
 			{
-				"siteId": "64b8f2b576fa8d974ea1238b"
+				"siteId": "64bf874551da8d2bf8e7ed34"
 			}
 		],
 		"userAssociations": [
