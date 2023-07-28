@@ -1,6 +1,0 @@
-{
-  "schemaId":"{{schema-id}}",
-  "templateName":"{{tenant-name}}-ALL",
-  "siteGroupId":"default",
-  "undeploy":["{{site-id-CA}}", "{{site-id-CB}}"]
-}
